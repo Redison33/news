@@ -1,0 +1,105 @@
+@import '_vars.scss';
+@import '_mixin.scss';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    min-width: 320px;
+    // background-color: $primary-dark;
+    font-family: 'Inter';
+    font-weight: 400;
+    position: relative;
+}
+
+.button-reset {
+    outline: none;
+    background: none;
+    border: none;
+    &:focus-visible {
+        outline: 2px solid black;
+    }
+}
+
+.p-reset {
+    margin: 0;
+}
+
+// .max-container {
+//     max-width: 1920px;
+//     margin: 0 auto;
+// }
+.container {
+    max-width: 1488px;
+    margin: 0 auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    &__wrap {
+        &-top {
+            background-color: $primary-dark;
+            display: none;
+            .header__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+                .nav {
+                    color: $primary-light;
+                    .list {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        list-style: none;
+                        gap: 32px;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+                }
+                .header__phone {
+                    color: $primary-light;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+            }
+            &-visible {
+                display: block;
+            }
+        }
+        &-middle {
+            // position: fixed;
+            background-color: $secondary-light;
+            .header__container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 0;
+            }
+        }
+        &-bottom {
+            background-color: yellow;
+            display: none;
+            .header__container {
+                display: flex;
+            }
+            &-visible {
+                display: block;
+            }
+        }
+    }
+}

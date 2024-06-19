@@ -1,0 +1,118 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter-Regular"), local("Inter Regular"), url("../font/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter-Medium"), local("Inter Medium"), url("../font/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter-SemiBold"), local("Inter SemiBold"), url("../font/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: local("Inter-Bold"), local("Inter Bold"), url("../font/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Inter";
+  font-weight: 400;
+  position: relative;
+}
+
+.button-reset {
+  outline: none;
+  background: none;
+  border: none;
+}
+.button-reset:focus-visible {
+  outline: 2px solid black;
+}
+
+.p-reset {
+  margin: 0;
+}
+
+.container {
+  max-width: 1488px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.header__wrap-top {
+  background-color: #111010;
+  display: none;
+}
+.header__wrap-top .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.header__wrap-top .header__container .nav {
+  color: #ffffff;
+}
+.header__wrap-top .header__container .nav .list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 16px;
+}
+.header__wrap-top .header__container .header__phone {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+.header__wrap-top-visible {
+  display: block;
+}
+.header__wrap-middle {
+  background-color: #f5f5f5;
+}
+.header__wrap-middle .header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.header__wrap-bottom {
+  background-color: yellow;
+  display: none;
+}
+.header__wrap-bottom .header__container {
+  display: flex;
+}
+.header__wrap-bottom-visible {
+  display: block;
+}/*# sourceMappingURL=style-index.css.map */
