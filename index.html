@@ -4,8 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./src/style/normalize.css" />
         <link rel="stylesheet" href="./src/style/style-index.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body class="body">
         <header class="header max-container">
@@ -28,8 +30,19 @@
             </div>
             <div class="header__wrap header__wrap-middle">
                 <div class="header__container container">
-                    <button class="header__button header__button-menu button-reset">Меню</button>
-                    <img src="" alt="" class="header__logo" />
+                    <button class="header__button header__button-menu button-reset">
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.5 6H16.5M1.5 1H16.5M1.5 11H16.5"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        Меню
+                    </button>
+                    <img src="./src/img/logo.png" alt="" class="header__logo" />
                     <div class="input__wrap">
                         <input type="text" class="header__input" placeholder="Поиск" />
                         <button class="input__button"></button>
@@ -52,11 +65,206 @@
                 </div>
             </div>
         </header>
-        <main>
-            <div style="font-size: 100px; max-width: 400px">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat totam ullam accusamus, reprehenderit hic rerum atque architecto et
-                veritatis accusantium vero repudiandae velit fuga iure maiores consequuntur doloremque dicta iusto.
-            </div>
+        <main class="main">
+            <section class="news">
+                <div class="news__container container">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide slide">
+                                <div class="slide__img">
+                                    <img src="./src/img/news-img.png" alt="" />
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__info">
+                                        <p class="slide__topic p-reset">Наклейка с разделом темы</p>
+                                        <p class="slide__date p-reset">23 мая 07:00</p>
+                                    </div>
+                                    <h3 class="slide__title">
+                                        Главные новости (редактор, формируя новость в той или иной рубрике, при необходимости ставит галочку в
+                                        специальном окошке «Главные новости»). Главные новости можно посмотреть «каруселью».
+                                    </h3>
+                                    <p class="slide__text p-reset">
+                                        Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина
+                                        рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли
+                                        отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от
+                                        молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов
+                                        после 50 летНутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог
+                                        Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог Кузина рассказала,
+                                        стоит ли отказываться от молочных продуктов после 50 лет
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__img">
+                                    <img src="./src/img/news-img.png" alt="" />
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__info">
+                                        <p class="slide__topic p-reset">Наклейка с разделом темы</p>
+                                        <p class="slide__date p-reset">23 мая 07:00</p>
+                                    </div>
+                                    <h3 class="slide__title">
+                                        Главные новости (редактор, формируя новость в той или иной рубрике, при необходимости ставит галочку в
+                                        специальном окошке «Главные новости»). Главные новости можно посмотреть «каруселью».
+                                    </h3>
+                                    <p class="slide__text p-reset">
+                                        Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина
+                                        рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли
+                                        отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от
+                                        молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов
+                                        после 50 летНутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог
+                                        Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог Кузина рассказала,
+                                        стоит ли отказываться от молочных продуктов после 50 лет
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__img">
+                                    <img src="./src/img/news-img.png" alt="" />
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__info">
+                                        <p class="slide__topic p-reset">Наклейка с разделом темы</p>
+                                        <p class="slide__date p-reset">23 мая 07:00</p>
+                                    </div>
+                                    <h3 class="slide__title">
+                                        Главные новости (редактор, формируя новость в той или иной рубрике, при необходимости ставит галочку в
+                                        специальном окошке «Главные новости»). Главные новости можно посмотреть «каруселью».
+                                    </h3>
+                                    <p class="slide__text p-reset">
+                                        Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина
+                                        рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли
+                                        отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от
+                                        молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов
+                                        после 50 летНутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог
+                                        Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог Кузина рассказала,
+                                        стоит ли отказываться от молочных продуктов после 50 лет
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__img">
+                                    <img src="./src/img/news-img.png" alt="" />
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__info">
+                                        <p class="slide__topic p-reset">Наклейка с разделом темы</p>
+                                        <p class="slide__date p-reset">23 мая 07:00</p>
+                                    </div>
+                                    <h3 class="slide__title">
+                                        Главные новости (редактор, формируя новость в той или иной рубрике, при необходимости ставит галочку в
+                                        специальном окошке «Главные новости»). Главные новости можно посмотреть «каруселью».
+                                    </h3>
+                                    <p class="slide__text p-reset">
+                                        Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина
+                                        рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли
+                                        отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от
+                                        молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов
+                                        после 50 летНутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог
+                                        Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог Кузина рассказала,
+                                        стоит ли отказываться от молочных продуктов после 50 лет
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide">
+                                <div class="slide__img">
+                                    <img src="./src/img/news-img.png" alt="" />
+                                </div>
+                                <div class="slide__content">
+                                    <div class="slide__info">
+                                        <p class="slide__topic p-reset">Наклейка с разделом темы</p>
+                                        <p class="slide__date p-reset">23 мая 07:00</p>
+                                    </div>
+                                    <h3 class="slide__title">
+                                        Главные новости (редактор, формируя новость в той или иной рубрике, при необходимости ставит галочку в
+                                        специальном окошке «Главные новости»). Главные новости можно посмотреть «каруселью».
+                                    </h3>
+                                    <p class="slide__text p-reset">
+                                        Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина
+                                        рассказала, стоит ли отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли
+                                        отказываться от молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от
+                                        молочных продуктов после 50 лет Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов
+                                        после 50 летНутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог
+                                        Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 летНутрициолог Кузина рассказала,
+                                        стоит ли отказываться от молочных продуктов после 50 лет
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="arrow-left">
+                                    <path
+                                        id="Icon"
+                                        d="M16.3334 9.99999H4.66669M4.66669 9.99999L10.5 15.8333M4.66669 9.99999L10.5 4.16666"
+                                        stroke="black"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="swiper-button-next">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="arrow-right">
+                                    <path
+                                        id="Icon"
+                                        d="M4.66669 9.99999H16.3334M16.3334 9.99999L10.5 4.16666M16.3334 9.99999L10.5 15.8333"
+                                        stroke="black"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="asideNews">
+                <div class="asideNews__container container">
+                    <div class="asideNews__card card card-new">
+                        <p class="card__info p-reset">Свежий выпуск</p>
+                        <p class="card__number">№49 от 15.05.2024</p>
+                        <div class="card__img">
+                            <img src="./src/img/news-img-small.png" alt="" />
+                        </div>
+                        <button class="card__button">Архив</button>
+                    </div>
+                    <div class="asideNews__card card">
+                        <div class="card__img">
+                            <img src="./src/img/news-img-small.png" alt="" />
+                        </div>
+                        <p class="card__text">Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет</p>
+                    </div>
+                    <div class="asideNews__card card">
+                        <div class="card__img">
+                            <img src="./src/img/news-img-small.png" alt="" />
+                        </div>
+                        <p class="card__text">Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет</p>
+                    </div>
+                    <div class="asideNews__card card">
+                        <div class="card__img">
+                            <img src="./src/img/news-img-small.png" alt="" />
+                        </div>
+                        <p class="card__text">Нутрициолог Кузина рассказала, стоит ли отказываться от молочных продуктов после 50 лет</p>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dolores! Mollitia earum dicta blanditiis est nisi perspiciatis
+                        nulla nesciunt vero aut quas ex, fugit voluptatibus, nostrum, ipsam pariatur esse tenetur.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dolores! Mollitia earum dicta blanditiis est nisi perspiciatis
+                        nulla nesciunt vero aut quas ex, fugit voluptatibus, nostrum, ipsam pariatur esse tenetur.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dolores! Mollitia earum dicta blanditiis est nisi perspiciatis
+                        nulla nesciunt vero aut quas ex, fugit voluptatibus, nostrum, ipsam pariatur esse tenetur.
+                    </p>
+                </div>
+            </aside>
         </main>
         <footer></footer>
         <script src="./src/js/main.js"></script>

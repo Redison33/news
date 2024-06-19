@@ -12,6 +12,7 @@
 // });
 document.addEventListener('DOMContentLoaded', () => {
     const headerTop = document.querySelector('.header__wrap-top');
+    const headerMiddle = document.querySelector('.header__wrap-middle');
     const headerBottom = document.querySelector('.header__wrap-bottom');
 
     window.addEventListener('scroll', handleScroll);
@@ -31,4 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // HeaderBottom
         isScrollGoTop ? headerBottom.classList.add('header__wrap-bottom-visible') : headerBottom.classList.remove('header__wrap-bottom-visible');
     }
+    const Swiper1 = new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 150,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 });
