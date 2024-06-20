@@ -91,12 +91,23 @@ body {
   font-size: 16px;
   line-height: normal;
 }
+.header__wrap-top .header__container .nav .list__item {
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.header__wrap-top .header__container .nav .list__item:hover {
+  color: #d6383c;
+}
 .header__wrap-top .header__container .header__phone {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: normal;
+  transition: color 0.3s ease-in-out;
+}
+.header__wrap-top .header__container .header__phone:hover {
+  color: #d6383c;
 }
 .header__wrap-middle {
   width: 100%;
@@ -115,6 +126,8 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
 }
 .header__wrap-middle .header__container .header__button-menu {
   background-color: #d6383c;
@@ -123,10 +136,26 @@ body {
   align-items: center;
   gap: 10px;
 }
+.header__wrap-middle .header__container .header__button-menu:hover {
+  background-color: #f9454a;
+}
+.header__wrap-middle .header__container .header__button-menu:active {
+  background-color: #4b0002;
+}
 .header__wrap-middle .header__container .header__button-enter {
-  border: 1.5px solid #d6383c;
+  border: 2px solid #d6383c;
   color: #d6383c;
   padding: 14px 43px;
+}
+.header__wrap-middle .header__container .header__button-enter:hover {
+  background-color: #fbebec;
+  border-color: #f9454a;
+  color: #f9454a;
+}
+.header__wrap-middle .header__container .header__button-enter:active {
+  background-color: #f7d7d8;
+  border-color: #4b0002;
+  color: #4b0002;
 }
 .header__wrap-middle .header__container .header__logo {
   margin-right: 30px;
@@ -176,6 +205,10 @@ body {
   color: #111010;
   border: 0;
   border-radius: 28px;
+  transition: color 0.3s ease-in-out;
+}
+.header__wrap-bottom .header__container .header__button:hover {
+  color: #d6383c;
 }
 .header__wrap-bottom-visible-start {
   position: fixed;
@@ -250,11 +283,15 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  transition: color 0.3s ease-in-out;
 }
 .main .news__container .news__swiper .swiper-wrapper .slide__content .slide__text {
   font-size: 16px;
   line-height: 118%;
   color: #414040;
+}
+.main .news__container .news__swiper .swiper-wrapper .slide:hover .slide__content .slide__title {
+  color: #d6383c;
 }
 .main .news__container .news__swiper .swiper-button-prev {
   width: 36px;
@@ -262,11 +299,14 @@ body {
   border-radius: 18px;
   top: auto;
   bottom: 0;
-  background-color: #e4e4e4;
+  background-color: #d6383c;
   left: 37.7%;
 }
 .main .news__container .news__swiper .swiper-button-prev svg {
   width: 20px;
+}
+.main .news__container .news__swiper .swiper-button-prev svg path {
+  stroke: #ffffff;
 }
 .main .news__container .news__swiper .swiper-button-prev::after {
   display: none;
@@ -277,11 +317,14 @@ body {
   border-radius: 18px;
   top: auto;
   bottom: 0;
-  background-color: #e4e4e4;
+  background-color: #d6383c;
   right: 37.7%;
 }
 .main .news__container .news__swiper .swiper-button-next svg {
   width: 20px;
+}
+.main .news__container .news__swiper .swiper-button-next svg path {
+  stroke: #ffffff;
 }
 .main .news__container .news__swiper .swiper-button-next::after {
   display: none;
@@ -313,6 +356,8 @@ body {
   padding: 16px;
   margin-bottom: 16px;
   border-bottom: 1px solid #e4e4e4;
+  border-radius: 16px;
+  transition: background-color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button {
   width: 253px;
@@ -327,11 +372,21 @@ body {
   border-radius: 40px;
   background-color: #f4f6f9;
   margin-bottom: 8px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button svg path {
+  transition: stroke 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button span {
   display: block;
   width: 165px;
   text-align: start;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button:hover {
+  color: #d6383c;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button:hover svg path {
+  stroke: #d6383c;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__gratters {
   height: 317px;
@@ -340,6 +395,8 @@ body {
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__gratters .gratter {
   padding: 16px;
   margin-right: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__gratters .gratter__date {
   margin-bottom: 4px;
@@ -361,7 +418,9 @@ body {
   width: 17px;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__gratters::-webkit-scrollbar-track {
-  background: #f4f6f9;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #f4f6f9;
   border-radius: 10px;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__gratters::-webkit-scrollbar-thumb {
@@ -375,6 +434,8 @@ body {
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__ads .ad {
   padding: 16px;
   margin-right: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__ads .ad__date {
   margin-bottom: 4px;
@@ -396,12 +457,32 @@ body {
   width: 17px;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__ads::-webkit-scrollbar-track {
-  background: #f4f6f9;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #f4f6f9;
   border-radius: 10px;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__ads::-webkit-scrollbar-thumb {
   background: #d6383c;
   border-radius: 10px;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover {
+  background-color: #f4f6f9;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover .asideInsideNews__button {
+  background-color: #ffffff;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover .asideInsideNews__gratters .gratter {
+  background-color: #ffffff;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover .asideInsideNews__gratters::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover .asideInsideNews__ads .ad {
+  background-color: #ffffff;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap:hover .asideInsideNews__ads::-webkit-scrollbar-track {
+  background-color: #ffffff;
 }
 .main .news__container .news__wrap .asideInsideNews__container .card {
   border-radius: 16px;
@@ -422,6 +503,10 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
+  transition: color 0.3s ease-in-out;
+}
+.main .news__container .news__wrap .asideInsideNews__container .card:hover .card__title {
+  color: #d6383c;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__cards {
   margin-top: 16px;
@@ -451,9 +536,13 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  transition: color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__cards .cardSmall:not(:last-child) {
   margin-bottom: 16px;
+}
+.main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__cards .cardSmall:hover .cardSmall__title {
+  color: #d6383c;
 }
 .main .news__container .news__wrap .news__basic {
   max-width: 854px;
@@ -517,6 +606,7 @@ body {
   font-weight: 700;
   line-height: normal;
   margin-bottom: 12px;
+  transition: color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .news__basic .news__cards .card__content .card__text {
   font-size: 16px;
@@ -525,6 +615,9 @@ body {
 }
 .main .news__container .news__wrap .news__basic .news__cards .card:not(:last-child) {
   margin-bottom: 16px;
+}
+.main .news__container .news__wrap .news__basic .news__cards .card:hover .card__content .card__title {
+  color: #d6383c;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside {
   padding-bottom: 60px;
@@ -565,6 +658,17 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__button:hover {
+  border-color: #f9454a;
+  color: #f9454a;
+  background-color: #fbebec;
+}
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__button:active {
+  border-color: #4b0002;
+  color: #4b0002;
+  background-color: #f7d7d8;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-prev {
   width: 36px;
@@ -572,11 +676,14 @@ body {
   border-radius: 18px;
   top: auto;
   bottom: 0;
-  background-color: #e4e4e4;
+  background-color: #d6383c;
   left: 33.7%;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-prev svg {
   width: 20px;
+}
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-prev svg path {
+  stroke: #ffffff;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-prev::after {
   display: none;
@@ -587,11 +694,14 @@ body {
   border-radius: 18px;
   top: auto;
   bottom: 0;
-  background-color: #e4e4e4;
+  background-color: #d6383c;
   right: 33.7%;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-next svg {
   width: 20px;
+}
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-next svg path {
+  stroke: #ffffff;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-next::after {
   display: none;
@@ -659,6 +769,10 @@ body {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  transition: color 0.3s ease-in-out;
+}
+.main .news__container .news__wrap .news__basic .news__cards-small .card:hover .card__content .card__title {
+  color: #d6383c;
 }
 .main .news__container .news__wrap .news__basic .news__button {
   display: block;
@@ -671,6 +785,13 @@ body {
   border-radius: 4px;
   background-color: #d6383c;
   padding: 14px 32px;
+  transition: background-color 0.3s ease-in-out;
+}
+.main .news__container .news__wrap .news__basic .news__button:hover {
+  background-color: #f9454a;
+}
+.main .news__container .news__wrap .news__basic .news__button:active {
+  background-color: #4b0002;
 }
 .main .asideNews {
   min-width: 285px;
@@ -695,6 +816,7 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: normal;
+  transition: color 0.3s ease-in-out;
 }
 .main .asideNews__container .card-new {
   padding: 16px;
@@ -731,6 +853,20 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.main .asideNews__container .card-new .card__button:hover {
+  border-color: #f9454a;
+  color: #f9454a;
+  background-color: #fbebec;
+}
+.main .asideNews__container .card-new .card__button:active {
+  border-color: #4b0002;
+  color: #4b0002;
+  background-color: #f7d7d8;
+}
+.main .asideNews__container .card:hover .card__title {
+  color: #d6383c;
 }
 .main .asideNews__container .asideNews__line {
   height: 1px;

@@ -69,6 +69,13 @@ body {
                         font-weight: 500;
                         font-size: 16px;
                         line-height: normal;
+                        &__item {
+                            transition: color 0.3s ease-in-out;
+                            cursor: pointer;
+                            &:hover {
+                                color: $red;
+                            }
+                        }
                     }
                 }
                 .header__phone {
@@ -77,6 +84,10 @@ body {
                     font-weight: 500;
                     font-size: 16px;
                     line-height: normal;
+                    transition: color 0.3s ease-in-out;
+                    &:hover {
+                        color: $red;
+                    }
                 }
             }
         }
@@ -95,17 +106,35 @@ body {
                     font-size: 16px;
                     font-weight: 500;
                     line-height: normal;
+                    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+                    cursor: pointer;
                     &-menu {
                         background-color: $red;
                         color: $primary-light;
                         display: flex;
                         align-items: center;
                         gap: 10px;
+                        &:hover {
+                            background-color: $hover-button;
+                        }
+                        &:active {
+                            background-color: $active-button;
+                        }
                     }
                     &-enter {
-                        border: 1.5px solid $red;
+                        border: 2px solid $red;
                         color: $red;
                         padding: 14px 43px;
+                        &:hover {
+                            background-color: $hover-button-bg;
+                            border-color: $hover-button;
+                            color: $hover-button;
+                        }
+                        &:active {
+                            background-color: $active-button-bg;
+                            border-color: $active-button;
+                            color: $active-button;
+                        }
                     }
                 }
                 .header__logo {
@@ -156,6 +185,10 @@ body {
                     color: $primary-dark;
                     border: 0;
                     border-radius: 28px;
+                    transition: color 0.3s ease-in-out;
+                    &:hover {
+                        color: $red;
+                    }
                 }
             }
             &-visible-start {
@@ -233,6 +266,7 @@ body {
                                 display: -webkit-box;
                                 -webkit-line-clamp: 3;
                                 -webkit-box-orient: vertical;
+                                transition: color 0.3s ease-in-out;
                             }
                             .slide__text {
                                 font-size: 16px;
@@ -240,7 +274,23 @@ body {
                                 color: #414040;
                             }
                         }
+                        &:hover {
+                            .slide__content {
+                                .slide__title {
+                                    color: $red;
+                                }
+                            }
+                        }
                     }
+                    // &:hover {
+                    //     .slide {
+                    //         &__content {
+                    //             .slide__title {
+                    //                 background-color: $red;
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
                 .swiper-button-prev {
                     width: 36px;
@@ -248,10 +298,13 @@ body {
                     border-radius: 18px;
                     top: auto;
                     bottom: 0;
-                    background-color: $grey-light;
+                    background-color: $red;
                     left: 37.7%;
                     svg {
                         width: 20px;
+                        path {
+                            stroke: $primary-light;
+                        }
                     }
                     &::after {
                         display: none;
@@ -263,10 +316,13 @@ body {
                     border-radius: 18px;
                     top: auto;
                     bottom: 0;
-                    background-color: $grey-light;
+                    background-color: $red;
                     right: 37.7%;
                     svg {
                         width: 20px;
+                        path {
+                            stroke: $primary-light;
+                        }
                     }
                     &::after {
                         display: none;
@@ -300,6 +356,8 @@ body {
                             padding: 16px;
                             margin-bottom: 16px;
                             border-bottom: 1px solid $grey-light;
+                            border-radius: 16px;
+                            transition: background-color 0.3s ease-in-out;
                             .asideInsideNews__button {
                                 width: 253px;
                                 display: flex;
@@ -314,10 +372,24 @@ body {
                                 border-radius: 40px;
                                 background-color: #f4f6f9;
                                 margin-bottom: 8px;
+                                transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                                svg {
+                                    path {
+                                        transition: stroke 0.3s ease-in-out;
+                                    }
+                                }
                                 span {
                                     display: block;
                                     width: 165px;
                                     text-align: start;
+                                }
+                                &:hover {
+                                    color: $red;
+                                    svg {
+                                        path {
+                                            stroke: $red;
+                                        }
+                                    }
                                 }
                             }
                             .asideInsideNews__gratters {
@@ -326,6 +398,8 @@ body {
                                 .gratter {
                                     padding: 16px;
                                     margin-right: 8px;
+                                    border-radius: 8px;
+                                    transition: background-color 0.3s ease-in-out;
                                     &__date {
                                         margin-bottom: 4px;
                                         font-size: 12px;
@@ -347,7 +421,8 @@ body {
                                     width: 17px;
                                 }
                                 &::-webkit-scrollbar-track {
-                                    background: #f4f6f9;
+                                    transition: background-color 0.3s ease-in-out;
+                                    background-color: #f4f6f9;
                                     border-radius: 10px;
                                 }
                                 &::-webkit-scrollbar-thumb {
@@ -361,6 +436,8 @@ body {
                                 .ad {
                                     padding: 16px;
                                     margin-right: 8px;
+                                    border-radius: 8px;
+                                    transition: background-color 0.3s ease-in-out;
                                     &__date {
                                         margin-bottom: 4px;
                                         font-size: 12px;
@@ -382,12 +459,35 @@ body {
                                     width: 17px;
                                 }
                                 &::-webkit-scrollbar-track {
-                                    background: #f4f6f9;
+                                    transition: background-color 0.3s ease-in-out;
+                                    background-color: #f4f6f9;
                                     border-radius: 10px;
                                 }
                                 &::-webkit-scrollbar-thumb {
                                     background: $red;
                                     border-radius: 10px;
+                                }
+                            }
+                            &:hover {
+                                background-color: #f4f6f9;
+                                .asideInsideNews__button {
+                                    background-color: $primary-light;
+                                }
+                                .asideInsideNews__gratters {
+                                    .gratter {
+                                        background-color: $primary-light;
+                                    }
+                                    &::-webkit-scrollbar-track {
+                                        background-color: $primary-light;
+                                    }
+                                }
+                                .asideInsideNews__ads {
+                                    .ad {
+                                        background-color: $primary-light;
+                                    }
+                                    &::-webkit-scrollbar-track {
+                                        background-color: $primary-light;
+                                    }
                                 }
                             }
                         }
@@ -409,6 +509,12 @@ body {
                                 font-size: 18px;
                                 font-weight: 600;
                                 line-height: normal;
+                                transition: color 0.3s ease-in-out;
+                            }
+                            &:hover {
+                                .card__title {
+                                    color: $red;
+                                }
                             }
                         }
                         .asideInsideNews__cards {
@@ -437,9 +543,15 @@ body {
                                     display: -webkit-box;
                                     -webkit-line-clamp: 3;
                                     -webkit-box-orient: vertical;
+                                    transition: color 0.3s ease-in-out;
                                 }
                                 &:not(:last-child) {
                                     margin-bottom: 16px;
+                                }
+                                &:hover {
+                                    .cardSmall__title {
+                                        color: $red;
+                                    }
                                 }
                             }
                         }
@@ -504,6 +616,7 @@ body {
                                     font-weight: 700;
                                     line-height: normal;
                                     margin-bottom: 12px;
+                                    transition: color 0.3s ease-in-out;
                                 }
                                 .card__text {
                                     font-size: 16px;
@@ -513,6 +626,13 @@ body {
                             }
                             &:not(:last-child) {
                                 margin-bottom: 16px;
+                            }
+                            &:hover {
+                                .card__content {
+                                    .card__title {
+                                        color: $red;
+                                    }
+                                }
                             }
                         }
                     }
@@ -553,6 +673,17 @@ body {
                                         font-size: 16px;
                                         font-weight: 500;
                                         line-height: 20px;
+                                        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                                        &:hover {
+                                            border-color: $hover-button;
+                                            color: $hover-button;
+                                            background-color: $hover-button-bg;
+                                        }
+                                        &:active {
+                                            border-color: $active-button;
+                                            color: $active-button;
+                                            background-color: $active-button-bg;
+                                        }
                                     }
                                 }
                             }
@@ -563,10 +694,13 @@ body {
                             border-radius: 18px;
                             top: auto;
                             bottom: 0;
-                            background-color: $grey-light;
+                            background-color: $red;
                             left: 33.7%;
                             svg {
                                 width: 20px;
+                                path {
+                                    stroke: $primary-light;
+                                }
                             }
                             &::after {
                                 display: none;
@@ -578,10 +712,13 @@ body {
                             border-radius: 18px;
                             top: auto;
                             bottom: 0;
-                            background-color: $grey-light;
+                            background-color: $red;
                             right: 33.7%;
                             svg {
                                 width: 20px;
+                                path {
+                                    stroke: $primary-light;
+                                }
                             }
                             &::after {
                                 display: none;
@@ -648,6 +785,14 @@ body {
                                     display: -webkit-box;
                                     -webkit-line-clamp: 3;
                                     -webkit-box-orient: vertical;
+                                    transition: color 0.3s ease-in-out;
+                                }
+                            }
+                            &:hover {
+                                .card__content {
+                                    .card__title {
+                                        color: $red;
+                                    }
                                 }
                             }
                         }
@@ -663,6 +808,13 @@ body {
                         border-radius: 4px;
                         background-color: $red;
                         padding: 14px 32px;
+                        transition: background-color 0.3s ease-in-out;
+                        &:hover {
+                            background-color: $hover-button;
+                        }
+                        &:active {
+                            background-color: $active-button;
+                        }
                     }
                 }
             }
@@ -691,6 +843,7 @@ body {
                     font-size: 18px;
                     font-weight: 600;
                     line-height: normal;
+                    transition: color 0.3s ease-in-out;
                 }
                 &-new {
                     padding: 16px;
@@ -726,6 +879,22 @@ body {
                         font-size: 16px;
                         font-weight: 500;
                         line-height: normal;
+                        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                        &:hover {
+                            border-color: $hover-button;
+                            color: $hover-button;
+                            background-color: $hover-button-bg;
+                        }
+                        &:active {
+                            border-color: $active-button;
+                            color: $active-button;
+                            background-color: $active-button-bg;
+                        }
+                    }
+                }
+                &:hover {
+                    .card__title {
+                        color: $red;
                     }
                 }
             }
