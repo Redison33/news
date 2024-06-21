@@ -6,7 +6,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./src/style/normalize.css" />
-        <link rel="stylesheet" href="./src/style/style-index.css" />
+        <link rel="stylesheet" href="./src/style/index/style-index.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body class="body">
@@ -42,26 +42,45 @@
                         </svg>
                         Меню
                     </button>
-                    <img src="./src/img/logo.png" alt="" class="header__logo" />
+                    <a href="index.html"><img src="./src/img/logo.png" alt="" class="header__logo" /></a>
                     <div class="input__wrap">
                         <input type="text" class="header__input" placeholder="Поиск" />
-                        <button class="input__button"></button>
+                        <button class="input__button button-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z"
+                                    stroke="#9F9EAE"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
                     </div>
                     <button class="header__button header__button-enter button-reset">Войти</button>
                 </div>
             </div>
-            <div class="header__wrap header__wrap-bottom p.card__text">
+            <div class="header__wrap header__wrap-bottom">
                 <div class="header__container container">
-                    <button class="header__button">Что в итоге?</button>
-                    <button class="header__button">Слово депутата</button>
-                    <button class="header__button">Обозреватель</button>
-                    <button class="header__button">Это интересно</button>
-                    <button class="header__button">Поколение</button>
-                    <button class="header__button">НКО</button>
-                    <button class="header__button">Горожане</button>
-                    <button class="header__button">Спорт</button>
-                    <button class="header__button">Афиша</button>
-                    <button class="header__button">Официально</button>
+                    <div class="header__switch switch">
+                        <label class="switch__wrap" for="switch">
+                            <input type="checkbox" id="switch" class="switch__input" aria-label="Цвет" />
+                            <span class="switch__slider"></span>
+                        </label>
+                        <span class="switch__option">Город</span>
+                    </div>
+                    <div class="header__buttons">
+                        <button class="header__button">Что в итоге?</button>
+                        <button class="header__button">Слово депутата</button>
+                        <button class="header__button">Обозреватель</button>
+                        <button class="header__button">Это интересно</button>
+                        <button class="header__button">Поколение</button>
+                        <button class="header__button">НКО</button>
+                        <button class="header__button">Горожане</button>
+                        <button class="header__button">Спорт</button>
+                        <button class="header__button">Афиша</button>
+                        <button class="header__button">Официально</button>
+                    </div>
                 </div>
             </div>
         </header>
@@ -460,59 +479,19 @@
                             <div class="news__swiper-inside swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide slide">
-                                        <div class="slide__content">
-                                            <h3 class="slide__title">
-                                                Это баннер, нужно сделать контейнер под загрузку картинки баннера + по верх баннера выводить кнопку
-                                            </h3>
-                                            <button class="slide__button button-reset">Кнопка</button>
-                                        </div>
-                                        <div class="slide__img">
-                                            <img src="./src/img/news-img.png" alt="" />
-                                        </div>
+                                        <button class="slide__button button-reset">Кнопка</button>
                                     </div>
                                     <div class="swiper-slide slide">
-                                        <div class="slide__content">
-                                            <h3 class="slide__title">
-                                                Это баннер, нужно сделать контейнер под загрузку картинки баннера + по верх баннера выводить кнопку
-                                            </h3>
-                                            <button class="slide__button button-reset">Кнопка</button>
-                                        </div>
-                                        <div class="slide__img">
-                                            <img src="./src/img/news-img.png" alt="" />
-                                        </div>
+                                        <button class="slide__button button-reset">Кнопка</button>
                                     </div>
                                     <div class="swiper-slide slide">
-                                        <div class="slide__content">
-                                            <h3 class="slide__title">
-                                                Это баннер, нужно сделать контейнер под загрузку картинки баннера + по верх баннера выводить кнопку
-                                            </h3>
-                                            <button class="slide__button button-reset">Кнопка</button>
-                                        </div>
-                                        <div class="slide__img">
-                                            <img src="./src/img/news-img.png" alt="" />
-                                        </div>
+                                        <button class="slide__button button-reset">Кнопка</button>
                                     </div>
                                     <div class="swiper-slide slide">
-                                        <div class="slide__content">
-                                            <h3 class="slide__title">
-                                                Это баннер, нужно сделать контейнер под загрузку картинки баннера + по верх баннера выводить кнопку
-                                            </h3>
-                                            <button class="slide__button button-reset">Кнопка</button>
-                                        </div>
-                                        <div class="slide__img">
-                                            <img src="./src/img/news-img.png" alt="" />
-                                        </div>
+                                        <button class="slide__button button-reset">Кнопка</button>
                                     </div>
                                     <div class="swiper-slide slide">
-                                        <div class="slide__content">
-                                            <h3 class="slide__title">
-                                                Это баннер, нужно сделать контейнер под загрузку картинки баннера + по верх баннера выводить кнопку
-                                            </h3>
-                                            <button class="slide__button button-reset">Кнопка</button>
-                                        </div>
-                                        <div class="slide__img">
-                                            <img src="./src/img/news-img.png" alt="" />
-                                        </div>
+                                        <button class="slide__button button-reset">Кнопка</button>
                                     </div>
                                 </div>
                                 <div class="swiper-pagination"></div>
@@ -590,7 +569,7 @@
                         <div class="card__img">
                             <img src="./src/img/news-img-medium.png" alt="" />
                         </div>
-                        <button class="card__button button-reset">Архив</button>
+                        <a class="card__button button-reset" href="./documnet.html">Архив</a>
                     </div>
                     <div class="asideNews__line"></div>
                     <div class="asideNews__card card">
@@ -655,7 +634,7 @@
                         <p class="footer__text p-reset">
                             О замеченных ошибках просьба сообщать при помощи выделения текста и комбинации клавишь Ctrl/Cmd + Enter
                         </p>
-                        <span class="footer__ageLimit">+12</span>
+                        <span class="footer__ageLimit">12+</span>
                     </div>
                     <div class="footer__wrap">
                         <nav class="footer__nav nav">

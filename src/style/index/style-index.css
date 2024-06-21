@@ -1,24 +1,24 @@
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Regular"), local("Inter Regular"), url("../font/Inter-Regular.woff2") format("woff2");
+  src: local("Inter-Regular"), local("Inter Regular"), url("../../font/Inter-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Medium"), local("Inter Medium"), url("../font/Inter-Medium.woff2") format("woff2");
+  src: local("Inter-Medium"), local("Inter Medium"), url("../../font/Inter-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter-SemiBold"), local("Inter SemiBold"), url("../font/Inter-SemiBold.woff2") format("woff2");
+  src: local("Inter-SemiBold"), local("Inter SemiBold"), url("../../font/Inter-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Inter";
-  src: local("Inter-Bold"), local("Inter Bold"), url("../font/Inter-Bold.woff2") format("woff2");
+  src: local("Inter-Bold"), local("Inter Bold"), url("../../font/Inter-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -174,11 +174,20 @@ body {
   line-height: normal;
 }
 .header__wrap-middle .header__container .input__wrap .input__button {
+  cursor: pointer;
   position: absolute;
+  display: flex;
+  align-items: center;
   right: 14px;
   top: 50%;
   line-height: normal;
   transform: translateY(-50%);
+}
+.header__wrap-middle .header__container .input__wrap .input__button svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+.header__wrap-middle .header__container .input__wrap .input__button:hover svg path {
+  stroke: #d6383c;
 }
 .header__wrap-middle-visible {
   position: fixed;
@@ -194,10 +203,66 @@ body {
 }
 .header__wrap-bottom .header__container {
   display: flex;
+  align-items: center;
+  gap: 32px;
   padding: 12px 0;
 }
-.header__wrap-bottom .header__container .header__button {
-  padding: 12px 24px;
+.header__wrap-bottom .header__container .switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header__wrap-bottom .header__container .switch__option {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: #0e0d35;
+}
+.header__wrap-bottom .header__container .switch__wrap {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+.header__wrap-bottom .header__container .switch__wrap .switch__input {
+  display: none;
+}
+.header__wrap-bottom .header__container .switch__wrap .switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cfcfd7;
+  border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+.header__wrap-bottom .header__container .switch__wrap .switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+.header__wrap-bottom .header__container .switch__wrap .switch__input:checked + .switch__slider:before {
+  transform: translateX(20px);
+}
+.header__wrap-bottom .header__container .switch__wrap .switch__input:checked + .switch__slider {
+  background-color: #d6383c;
+}
+.header__wrap-bottom .header__container .header__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header__wrap-bottom .header__container .header__buttons .header__button {
+  cursor: pointer;
+  padding: 12px 18px;
   background-color: #f5f5f5;
   font-size: 16px;
   line-height: normal;
@@ -207,7 +272,7 @@ body {
   border-radius: 28px;
   transition: color 0.3s ease-in-out;
 }
-.header__wrap-bottom .header__container .header__button:hover {
+.header__wrap-bottom .header__container .header__buttons .header__button:hover {
   color: #d6383c;
 }
 .header__wrap-bottom-visible-start {
@@ -360,6 +425,7 @@ body {
   transition: background-color 0.3s ease-in-out;
 }
 .main .news__container .news__wrap .asideInsideNews__container .asideInsideNews__wrap .asideInsideNews__button {
+  cursor: pointer;
   width: 253px;
   display: flex;
   align-items: center;
@@ -624,30 +690,18 @@ body {
   margin-bottom: 32px;
 }
 .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide {
-  display: flex;
-  background-color: #f4f3ff;
-  justify-content: space-between;
+  position: relative;
+  background-image: url("../../img/banner.png");
   border-radius: 16px;
   padding: 42px;
   box-sizing: border-box;
   min-height: 342px;
 }
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__img {
-  min-width: 268px;
-}
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content {
-  max-width: 377px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__title {
-  color: #0e0d35;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: normal;
-}
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__button {
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide .slide__button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 42px;
+  margin-bottom: auto;
   width: 151px;
   padding: 14px 32px;
   text-align: center;
@@ -660,12 +714,12 @@ body {
   line-height: 20px;
   transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__button:hover {
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide .slide__button:hover {
   border-color: #f9454a;
   color: #f9454a;
   background-color: #fbebec;
 }
-.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide__content .slide__button:active {
+.main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-wrapper .slide .slide__button:active {
   border-color: #4b0002;
   color: #4b0002;
   background-color: #f7d7d8;
@@ -775,6 +829,7 @@ body {
   color: #d6383c;
 }
 .main .news__container .news__wrap .news__basic .news__button {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   color: #ffffff;
@@ -845,6 +900,9 @@ body {
   margin-bottom: 16px;
 }
 .main .asideNews__container .card-new .card__button {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
   border: 2px solid #d6383c;
   border-radius: 6px;
   background-color: #ffffff;
@@ -969,6 +1027,13 @@ body {
   font-weight: 500;
   font-size: 18px;
   line-height: normal;
+}
+.footer__container .footer__top .footer__wrap:last-child .nav__list .list__item {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+.footer__container .footer__top .footer__wrap:last-child .nav__list .list__item:hover {
+  color: #d6383c;
 }
 .footer__container .footer__bottom {
   display: flex;

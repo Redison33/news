@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./src/style/normalize.css" />
+        <link rel="stylesheet" href="./src/style/document/style-document.css" />
+    </head>
+    <body>
+        <header class="header max-container">
+            <div class="header__wrap header__wrap-top header__wrap-top-visible">
+                <div class="header__container container">
+                    <nav class="header__nav nav">
+                        <ul class="nav__list list">
+                            <li class="list__item item">Редакция</li>
+                            <li class="list__item item">Реклама</li>
+                            <li class="list__item item">Пресс-центр</li>
+                            <li class="list__item item">Обратная связь</li>
+                            <li class="list__item item">Контакты</li>
+                            <li class="list__item item">Архив</li>
+                            <li class="list__item item">История газеты</li>
+                            <li class="list__item item">Документы</li>
+                        </ul>
+                    </nav>
+                    <a href="tel:+74922531351" class="header__phone">8 (4922) 53-13-51</a>
+                </div>
+            </div>
+            <div class="header__wrap header__wrap-middle">
+                <div class="header__container container">
+                    <button class="header__button header__button-menu button-reset">
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.5 6H16.5M1.5 1H16.5M1.5 11H16.5"
+                                stroke="white"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        Меню
+                    </button>
+                    <a href="index.html"><img src="./src/img/logo.png" alt="" class="header__logo" /></a>
+                    <div class="input__wrap">
+                        <input type="text" class="header__input" placeholder="Поиск" />
+                        <button class="input__button button-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z"
+                                    stroke="#9F9EAE"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                    <button class="header__button header__button-enter button-reset">Войти</button>
+                </div>
+            </div>
+            <div class="header__wrap header__wrap-bottom">
+                <div class="header__container container">
+                    <div class="header__switch switch">
+                        <label class="switch__wrap" for="switch">
+                            <input type="checkbox" id="switch" class="switch__input" aria-label="Цвет" />
+                            <span class="switch__slider"></span>
+                        </label>
+                        <span class="switch__option">Город</span>
+                    </div>
+                    <div class="header__buttons">
+                        <button class="header__button">Что в итоге?</button>
+                        <button class="header__button">Слово депутата</button>
+                        <button class="header__button">Обозреватель</button>
+                        <button class="header__button">Это интересно</button>
+                        <button class="header__button">Поколение</button>
+                        <button class="header__button">НКО</button>
+                        <button class="header__button">Горожане</button>
+                        <button class="header__button">Спорт</button>
+                        <button class="header__button">Афиша</button>
+                        <button class="header__button">Официально</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="document">
+                <div class="document__container container">
+                    <h1 class="document__title">Официальные документы</h1>
+                    <div class="document__filter filter">
+                        <div class="filter__inputs">
+                            <input type="text" class="filter__input" placeholder="Поиск по названию" />
+                            <input type="number" class="filter__input" placeholder="Номер документа" />
+                            <input type="text" class="filter__input" placeholder="Принявший орган" />
+                            <input type="text" class="filter__input" placeholder="Тип документа" />
+                            <input type="date" class="filter__input" />
+                        </div>
+                        <div class="filter__buttons">
+                            <button class="filter__button button-reset">Найти</button>
+                            <button class="filter__button button-reset">Сбросить</button>
+                        </div>
+                    </div>
+                    <div class="document__cards">
+                        <a href="documentInfo.html" class="doceument__card card">
+                            <div class="card__info">
+                                <span class="card__tag">№1</span>
+                                <span class="card__tag">12.04.2024</span>
+                                <span class="card__tag"><span></span> Приказ председателя контрольно-счётной палаты города</span>
+                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                            </div>
+                            <h3 class="card__title">
+                                О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
+                                с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
+                                Центральной северной части микрорайона Коммунар в г. Владимире
+                            </h3>
+                            <div class="card__files">
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Отсканированная копия оригинала
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Текст документа
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №1
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №2
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №3
+                                </div>
+                            </div>
+                        </a>
+                        <a href="documentInfo.html" class="doceument__card card">
+                            <div class="card__info">
+                                <span class="card__tag">№1</span>
+                                <span class="card__tag">12.04.2024</span>
+                                <span class="card__tag"><span></span>Приказ председателя контрольно-счётной палаты города</span>
+                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                            </div>
+                            <h3 class="card__title">
+                                О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
+                                с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
+                                Центральной северной части микрорайона Коммунар в г. Владимире
+                            </h3>
+                            <div class="card__files">
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Отсканированная копия оригинала
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Текст документа
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №1
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №2
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №3
+                                </div>
+                            </div>
+                        </a>
+                        <a href="documentInfo.html" class="doceument__card card">
+                            <div class="card__info">
+                                <span class="card__tag">№1</span>
+                                <span class="card__tag">12.04.2024</span>
+                                <span class="card__tag"><span></span>Приказ председателя контрольно-счётной палаты города</span>
+                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                            </div>
+                            <h3 class="card__title">
+                                О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
+                                с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
+                                Центральной северной части микрорайона Коммунар в г. Владимире
+                            </h3>
+                            <div class="card__files">
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Отсканированная копия оригинала
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Текст документа
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №1
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №2
+                                </div>
+                                <div class="card__file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <path
+                                            d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                            stroke="#868599"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                    Приложение №3
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="document__pagination pagination">
+                        <button class="pagination__button pagination__button-prev button-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M19 12H5M5 12L12 19M5 12L12 5"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                        <div class="pagination__pages">
+                            <button class="pagination__page button-reset pagination__page--active">1</button>
+                            <button class="pagination__page button-reset">2</button>
+                            <button class="pagination__page button-reset">3</button>
+                            <button class="pagination__page button-reset">4</button>
+                            <button class="pagination__page button-reset">5</button>
+                        </div>
+                        <button class="pagination__button pagination__button-next button-reset">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                                    stroke="white"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__top">
+                    <div class="footer__wrap">
+                        <img src="./src/img/footer-logo.jpg" alt="" class="footer__logo" />
+                        <p class="footer__text p-reset">Сетевое издание “Владимир - это Мы”</p>
+                        <p class="footer__text p-reset">
+                            Все права защищены. Копирование и использование полных материалов запрещено, частичное цитирование возможно только при
+                            условии гиперссылки на сайт www.владимирэтомы.рф.
+                        </p>
+                        <p class="footer__text p-reset">
+                            Свидетельство о регистрации СМИ: серия ЭЛ № ФС 77-87219 от 22 апреля 2024 г. Выдано Федеральной службой по надзору в сфере
+                            связи, информационных технологий и массовых коммуникаций.
+                        </p>
+                    </div>
+                    <div class="footer__wrap">
+                        <p class="footer__text p-reset">Главный редактор: Боровков Р.В.</p>
+                        <p class="footer__text p-reset">8 (4922) 53-13-51</p>
+                        <p class="footer__text p-reset">vladimiretomy@mail.ru</p>
+                        <p class="footer__text p-reset">600000, Владимирская обл., г. Владимир, ул. Горького, д. 36.</p>
+                        <p class="footer__text p-reset">
+                            О замеченных ошибках просьба сообщать при помощи выделения текста и комбинации клавишь Ctrl/Cmd + Enter
+                        </p>
+                        <span class="footer__ageLimit">12+</span>
+                    </div>
+                    <div class="footer__wrap">
+                        <nav class="footer__nav nav">
+                            <ul class="nav__list list">
+                                <li class="list__item">Редакция</li>
+                                <li class="list__item">Реклама</li>
+                                <li class="list__item">Пресс-центр</li>
+                                <li class="list__item">Обратная связь</li>
+                                <li class="list__item">Контакты</li>
+                                <li class="list__item">Архив</li>
+                                <li class="list__item">История газеты</li>
+                            </ul>
+                        </nav>
+                        <nav class="footer__nav nav">
+                            <ul class="nav__list list">
+                                <li class="list__item">Город</li>
+                                <li class="list__item">Важные новости</li>
+                                <li class="list__item">О здоровье</li>
+                                <li class="list__item">Эксклюзив</li>
+                                <li class="list__item">Спорт</li>
+                                <li class="list__item">Финансы</li>
+                                <li class="list__item">Еда</li>
+                                <li class="list__item">Экономика</li>
+                                <li class="list__item">В мире</li>
+                                <li class="list__item">Происшествие</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__text p-reset">Политика конфиденциальности</p>
+                    <p class="footer__text p-reset">
+                        ©2017 - 2023 Министерство образования и молодежной политики Владимирской области. Все права защищены.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="./src/js/document.js"></script>
+    </body>
+</html>

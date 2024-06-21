@@ -1,5 +1,5 @@
-@import '_vars.scss';
-@import '_mixin.scss';
+@import '../_vars.scss';
+@import '../_mixin.scss';
 
 html {
     box-sizing: border-box;
@@ -153,11 +153,26 @@ body {
                         line-height: normal;
                     }
                     .input__button {
+                        cursor: pointer;
                         position: absolute;
+                        display: flex;
+                        align-items: center;
                         right: 14px;
                         top: 50%;
                         line-height: normal;
                         transform: translateY(-50%);
+                        svg {
+                            path {
+                                transition: stroke 0.3s ease-in-out;
+                            }
+                        }
+                        &:hover {
+                            svg {
+                                path {
+                                    stroke: $red;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -175,19 +190,76 @@ body {
             transition: transform 0.4s ease-in-out;
             .header__container {
                 display: flex;
+                align-items: center;
+                gap: 32px;
                 padding: 12px 0;
-                .header__button {
-                    padding: 12px 24px;
-                    background-color: $secondary-light;
-                    font-size: 16px;
-                    line-height: normal;
-                    font-weight: 500;
-                    color: $primary-dark;
-                    border: 0;
-                    border-radius: 28px;
-                    transition: color 0.3s ease-in-out;
-                    &:hover {
-                        color: $red;
+                .switch {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    &__option {
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: normal;
+                        color: $secondary-dark;
+                    }
+                    &__wrap {
+                        position: relative;
+                        display: inline-block;
+                        width: 48px;
+                        height: 28px;
+                        .switch__input {
+                            display: none;
+                        }
+                        .switch__slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: #cfcfd7;
+                            border-radius: 20px;
+                            transition: background-color 0.3s ease-in-out;
+                            &:before {
+                                position: absolute;
+                                content: '';
+                                height: 20px;
+                                width: 20px;
+                                left: 4px;
+                                bottom: 4px;
+                                background-color: $primary-light;
+                                border-radius: 15px;
+                                transition: transform 0.3s ease-in-out;
+                            }
+                        }
+                        .switch__input:checked + .switch__slider:before {
+                            transform: translateX(20px);
+                        }
+
+                        .switch__input:checked + .switch__slider {
+                            background-color: $red;
+                        }
+                    }
+                }
+                .header__buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .header__button {
+                        cursor: pointer;
+                        padding: 12px 18px;
+                        background-color: $secondary-light;
+                        font-size: 16px;
+                        line-height: normal;
+                        font-weight: 500;
+                        color: $primary-dark;
+                        border: 0;
+                        border-radius: 28px;
+                        transition: color 0.3s ease-in-out;
+                        &:hover {
+                            color: $red;
+                        }
                     }
                 }
             }
@@ -359,6 +431,7 @@ body {
                             border-radius: 16px;
                             transition: background-color 0.3s ease-in-out;
                             .asideInsideNews__button {
+                                cursor: pointer;
                                 width: 253px;
                                 display: flex;
                                 align-items: center;
@@ -641,49 +714,40 @@ body {
                         margin-bottom: 32px;
                         .swiper-wrapper {
                             .slide {
-                                display: flex;
-                                background-color: #f4f3ff;
-                                justify-content: space-between;
+                                // display: flex;
+                                position: relative;
+                                // justify-content: space-between;
+                                background-image: url('../../img/banner.png');
                                 border-radius: 16px;
                                 padding: 42px;
                                 box-sizing: border-box;
                                 min-height: 342px;
-                                &__img {
-                                    min-width: 268px;
-                                }
-                                &__content {
-                                    max-width: 377px;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    flex-direction: column;
-                                    .slide__title {
-                                        color: $secondary-dark;
-                                        font-size: 24px;
-                                        font-weight: 600;
-                                        line-height: normal;
+                                .slide__button {
+                                    cursor: pointer;
+                                    // bottom: 0;
+                                    position: absolute;
+                                    bottom: 42px;
+                                    margin-bottom: auto;
+                                    width: 151px;
+                                    padding: 14px 32px;
+                                    text-align: center;
+                                    background-color: $primary-light;
+                                    border: 1px solid $red;
+                                    border-radius: 4px;
+                                    color: $red;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    line-height: 20px;
+                                    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                                    &:hover {
+                                        border-color: $hover-button;
+                                        color: $hover-button;
+                                        background-color: $hover-button-bg;
                                     }
-                                    .slide__button {
-                                        width: 151px;
-                                        padding: 14px 32px;
-                                        text-align: center;
-                                        background-color: $primary-light;
-                                        border: 1px solid $red;
-                                        border-radius: 4px;
-                                        color: $red;
-                                        font-size: 16px;
-                                        font-weight: 500;
-                                        line-height: 20px;
-                                        transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-                                        &:hover {
-                                            border-color: $hover-button;
-                                            color: $hover-button;
-                                            background-color: $hover-button-bg;
-                                        }
-                                        &:active {
-                                            border-color: $active-button;
-                                            color: $active-button;
-                                            background-color: $active-button-bg;
-                                        }
+                                    &:active {
+                                        border-color: $active-button;
+                                        color: $active-button;
+                                        background-color: $active-button-bg;
                                     }
                                 }
                             }
@@ -798,6 +862,7 @@ body {
                         }
                     }
                     .news__button {
+                        cursor: pointer;
                         display: block;
                         margin: 0 auto;
                         color: $primary-light;
@@ -871,6 +936,9 @@ body {
                         margin-bottom: 16px;
                     }
                     .card__button {
+                        text-decoration: none;
+                        display: block;
+                        cursor: pointer;
                         border: 2px solid $red;
                         border-radius: 6px;
                         background-color: $primary-light;
@@ -1004,6 +1072,13 @@ body {
                             font-weight: 500;
                             font-size: 18px;
                             line-height: normal;
+                            .list__item {
+                                cursor: pointer;
+                                transition: color 0.3s ease-in-out;
+                                &:hover {
+                                    color: $red;
+                                }
+                            }
                         }
                     }
                 }
