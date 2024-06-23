@@ -1,0 +1,66 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 1600px) {
+    .container {
+        padding: 0 80px;
+        max-width: unset;
+    }
+
+    .header {
+        &__wrap {
+            &-top {
+                .header__container {
+                    padding: 20px 80px;
+                }
+            }
+            &-middle {
+                .header__container {
+                    padding: 18px 80px;
+                    gap: 32px;
+                    .header__logo {
+                        margin-right: 30px;
+                    }
+                }
+            }
+            &-bottom {
+                .header__container {
+                    padding: 12px 80px;
+                    gap: 44px;
+                }
+            }
+        }
+    }
+    .document {
+        &__container {
+        }
+    }
+    .footer {
+        &__container {
+            .footer__text {
+                line-height: 120%;
+            }
+            .footer__top {
+                margin-bottom: 30px;
+                .footer__wrap {
+                    max-width: 347px;
+                    .footer__logo {
+                        margin-bottom: 8px;
+                    }
+                    .footer__ageLimit {
+                        bottom: 17px;
+                    }
+
+                    &:last-child {
+                        gap: 53px;
+                        .nav {
+                            &__list {
+                                gap: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

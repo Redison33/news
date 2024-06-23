@@ -70,10 +70,13 @@ body {
                         font-size: 16px;
                         line-height: normal;
                         &__item {
-                            transition: color 0.3s ease-in-out;
-                            cursor: pointer;
-                            &:hover {
-                                color: $red;
+                            a {
+                                transition: color 0.3s ease-in-out;
+                                color: $primary-light;
+                                text-decoration: none;
+                                &:hover {
+                                    color: $red;
+                                }
                             }
                         }
                     }
@@ -124,7 +127,7 @@ body {
                     &-enter {
                         border: 2px solid $red;
                         color: $red;
-                        padding: 14px 43px;
+                        padding: 14px 32px;
                         &:hover {
                             background-color: $hover-button-bg;
                             border-color: $hover-button;
@@ -139,6 +142,9 @@ body {
                 }
                 .header__logo {
                     margin-right: 30px;
+                    img {
+                        min-width: 165px;
+                    }
                 }
                 .input__wrap {
                     position: relative;
@@ -246,7 +252,13 @@ body {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
+                    gap: 12px;
+                    overflow-x: scroll;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                     .header__button {
+                        white-space: nowrap;
                         cursor: pointer;
                         padding: 12px 18px;
                         background-color: $secondary-light;
@@ -273,7 +285,48 @@ body {
         }
     }
 }
+.breadcrumb {
+    max-width: 1488px;
+    margin: 0 auto;
+    &__list {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 8px;
+        .breadcrumb__item {
+            a {
+                display: flex;
+                justify-content: start;
+                gap: 8px;
+                text-decoration: none;
+                color: #7d8591;
+                max-width: 434px;
+                height: 17px;
+                overflow: hidden;
+                transition: 0.3s ease-in-out;
+                span {
+                    margin: auto 0;
+                    display: inline-block;
+                    border-radius: 10px;
+                    min-width: 4px;
+                    height: 4px;
+                    background-color: #7d8591;
+                }
+                &:hover {
+                    color: $red;
+                    span {
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
 .documentInfo {
+    margin-bottom: 120px;
     &__container {
         .documentInfo__title {
             margin: 0;
@@ -288,52 +341,107 @@ body {
             background-color: $primary-light;
             padding: 42px;
             .info {
+                // max-width: 798px;
+                display: grid;
+                grid-template-columns: 217px 589px;
+                grid-column-gap: 32px;
+                grid-row-gap: 12px;
+                gap: 12px;
+                margin-bottom: 24px;
                 &__number {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     font-size: 14px;
                     color: $secondary-dark;
                     font-weight: 500;
                     line-height: normal;
                     span {
+                        display: inline-block;
                         font-size: 14px;
                         color: #575672;
                         font-weight: 400;
                         line-height: normal;
+                        padding: 8px 16px;
+                        background-color: #f8f8f9;
+                        border-radius: 28px;
                     }
                 }
                 &__date {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     font-size: 14px;
                     color: $secondary-dark;
                     font-weight: 500;
                     line-height: normal;
                     span {
+                        display: inline-block;
                         font-size: 14px;
                         color: #575672;
                         font-weight: 400;
                         line-height: normal;
+                        padding: 8px 16px;
+                        background-color: #f8f8f9;
+                        border-radius: 28px;
                     }
                 }
                 &__type {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     font-size: 14px;
                     color: $secondary-dark;
                     font-weight: 500;
                     line-height: normal;
                     span {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
                         font-size: 14px;
                         color: #575672;
                         font-weight: 400;
                         line-height: normal;
+                        padding: 8px 16px;
+                        background-color: #f8f8f9;
+                        border-radius: 28px;
+                        span {
+                            display: inline-block;
+                            padding: 0;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 8px;
+                            background-color: #8b89f1;
+                        }
                     }
                 }
                 &__corp {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     font-size: 14px;
                     color: $secondary-dark;
                     font-weight: 500;
                     line-height: normal;
                     span {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
                         font-size: 14px;
                         color: #575672;
                         font-weight: 400;
                         line-height: normal;
+                        padding: 8px 16px;
+                        background-color: #f8f8f9;
+                        border-radius: 28px;
+                        span {
+                            display: inline-block;
+                            padding: 0;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: 8px;
+                            background-color: #f189e3;
+                        }
                     }
                 }
             }
@@ -341,17 +449,66 @@ body {
                 border-radius: 8px;
                 background-color: #f4f6f9;
                 padding: 24px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-bottom: 24px;
                 &__title {
+                    grid-area: 1 / 1 / 2 / 3;
                     margin: 0;
+                    font-size: 18px;
+                    color: $secondary-dark;
+                    font-weight: 600;
+                    line-height: normal;
+                    margin-bottom: 24px;
                 }
                 &__wrap {
                     .loading__text {
+                        margin: 0;
+                        font-size: 14px;
+                        color: #575672;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin-bottom: 8px;
+                    }
+                    label {
+                        display: flex;
+                        width: 100%;
+                        background-color: $primary-light;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 16px;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 14px;
+                        color: #868599;
+                        font-weight: 500;
+                        line-height: normal;
+                        transition: color 0.3s ease-in-out;
+                        svg {
+                            path {
+                                transition: stroke 0.3s ease-in-out;
+                            }
+                        }
+                        &:hover {
+                            color: $green;
+                            svg {
+                                path {
+                                    stroke: $green;
+                                }
+                            }
+                        }
                     }
                     .loading__input {
+                        display: none;
                     }
                 }
             }
             &__date {
+                font-size: 12px;
+                color: #9f9eae;
+                font-weight: 400;
+                line-height: normal;
             }
         }
     }
@@ -421,10 +578,13 @@ body {
                             font-size: 18px;
                             line-height: normal;
                             .list__item {
-                                cursor: pointer;
-                                transition: color 0.3s ease-in-out;
-                                &:hover {
-                                    color: $red;
+                                a {
+                                    transition: color 0.3s ease-in-out;
+                                    color: $primary-light;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $red;
+                                    }
                                 }
                             }
                         }

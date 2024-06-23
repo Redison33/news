@@ -1,0 +1,214 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 960px) {
+    .header {
+        &__wrap {
+            &-top {
+                .header__container {
+                    .nav {
+                        .list {
+                            &__item {
+                                &:nth-child(4) {
+                                    display: none;
+                                }
+                                &:nth-child(6) {
+                                    display: none;
+                                }
+                                &:nth-child(7) {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-middle {
+                .header__container {
+                    padding: 18px 16px;
+                    gap: 16px;
+                    .header__button-menu {
+                        margin-right: 0;
+                        padding: 18px 15px;
+                        span {
+                            display: none;
+                        }
+                    }
+                    .header__logo {
+                        margin-right: 28px;
+                    }
+                }
+            }
+            &-bottom {
+                .header__container {
+                    padding: 11px 16px;
+                    gap: 32px;
+                    .switch {
+                        gap: 8px;
+                        &__wrap {
+                            width: 36px;
+                            height: 22px;
+                            .switch__slider {
+                                &::before {
+                                    height: 14px;
+                                    width: 14px;
+                                }
+                            }
+                        }
+                        &__option {
+                            font-size: 14px;
+                        }
+                    }
+                    .header__buttons {
+                        .header__button {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        .news {
+            &__container {
+                .news__swiper {
+                    // margin-bottom: 42px;
+                    // padding-bottom: 63px;
+                    .swiper-wrapper {
+                        .slide {
+                            gap: 12px;
+                            &__img {
+                                min-width: 286px;
+                            }
+                            &__content {
+                                padding: 12px 12px 20px 0;
+                                .slide__title {
+                                    font-size: 16px;
+                                    height: 57px;
+                                    line-height: 115%;
+                                }
+                                .slide__text {
+                                    font-size: 14px;
+                                    min-height: 135px;
+                                    height: 135px;
+                                    -webkit-line-clamp: 8;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 28%;
+                    }
+                    .swiper-button-next {
+                        right: 28%;
+                    }
+                }
+                .news__wrap {
+                    // gap: 42px;
+                    // flex-direction: column;
+                    .asideInsideNews {
+                        &__container {
+                            // display: flex;
+                            // gap: 16px;
+                            // padding: 0;
+                            .asideInsideNews__wrap {
+                                // width: 100%;
+                                // border: none;
+                                // margin: 0;
+                                padding: 12px;
+                                padding-bottom: 0;
+                                background-color: #f4f6f9;
+                                .asideInsideNews__button {
+                                    background-color: $primary-light;
+                                    font-size: 14px;
+                                    // justify-content: start;
+                                    // padding: 9px 18px 9px 13px;
+                                    padding: 9px 17px;
+                                    // svg {
+                                    //     &:first-child {
+                                    //         margin-right: 8px;
+                                    //     }
+                                    //     &:last-child {
+                                    //         margin-left: auto;
+                                    //     }
+                                    // }
+                                }
+                                .asideInsideNews__gratters {
+                                    // height: 270px;
+
+                                    .gratter {
+                                        background-color: $primary-light;
+                                    }
+                                    &::-webkit-scrollbar-track {
+                                        background-color: $primary-light;
+                                    }
+                                }
+                                .asideInsideNews__ads {
+                                    .ad {
+                                        background-color: $primary-light;
+                                    }
+                                    &::-webkit-scrollbar-track {
+                                        background-color: $primary-light;
+                                    }
+                                }
+                            }
+                            .card-new {
+                                min-width: 218px;
+                                display: block;
+                                .card__img {
+                                    height: 175px;
+                                    margin-bottom: 8px;
+                                }
+                                .card__number {
+                                    font-size: 16px;
+                                }
+                                .card__button {
+                                    text-align: center;
+                                    padding: 13px 0;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    .news__basic {
+                        .news__swiper-inside {
+                            .swiper-button-prev {
+                                left: 28%;
+                            }
+                            .swiper-button-next {
+                                right: 28%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &__container {
+            .footer__top {
+                gap: 0;
+                .footer__wrap {
+                    &:last-child {
+                        gap: 24px;
+                    }
+                    &:first-child {
+                        gap: 50px;
+                    }
+                    &:nth-child(2) {
+                        max-width: 285px;
+                        min-height: unset;
+                        padding-bottom: 70px;
+                        margin-bottom: 44px;
+                    }
+                }
+            }
+            .footer__bottom {
+                display: block;
+                .footer__text:first-child {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

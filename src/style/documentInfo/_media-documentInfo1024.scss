@@ -1,0 +1,110 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 16px;
+        max-width: unset;
+    }
+
+    .header {
+        &__wrap {
+            &-top {
+                .header__container {
+                    padding: 20px 16px;
+                    .nav {
+                        .list {
+                            gap: 12px;
+                        }
+                    }
+                }
+            }
+            &-middle {
+                .header__container {
+                    padding: 18px 16px;
+                    gap: 16px;
+                    .header__button-menu {
+                        margin-right: 16px;
+                    }
+                    .header__logo {
+                        margin-right: 42px;
+                    }
+                }
+            }
+            &-bottom {
+                .header__container {
+                    padding: 10px 16px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 42px 0;
+        &__container {
+            .footer__text {
+                line-height: 120%;
+            }
+            .footer__top {
+                margin-bottom: 12px;
+                flex-wrap: wrap;
+                gap: 44px;
+                .footer__wrap {
+                    max-width: unset;
+                    .footer__logo {
+                        margin-bottom: 8px;
+                    }
+                    .footer__ageLimit {
+                        bottom: 17px;
+                    }
+
+                    &:last-child {
+                        gap: 80px;
+                    }
+                    &:first-child {
+                        order: 3;
+                        display: flex;
+                        gap: 60px;
+                        .footer__logo {
+                            display: none;
+                        }
+                        .footer__text-name {
+                            display: none;
+                        }
+                    }
+                    &:nth-child(2) {
+                        max-width: 500px;
+                        min-height: 405px;
+                        .footer__logo {
+                            display: block;
+                            margin-bottom: 12px;
+                        }
+                        .footer__text {
+                            &:nth-child(4) {
+                                margin-bottom: 12px;
+                            }
+                            &:nth-child(6) {
+                                margin-bottom: 32px;
+                            }
+                        }
+                        .footer__text-name {
+                            display: block;
+                            margin-bottom: 32px !important;
+                        }
+                        .footer__ageLimit {
+                            bottom: 0;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+            .footer__bottom {
+                display: block;
+                .footer__text:first-child {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+}

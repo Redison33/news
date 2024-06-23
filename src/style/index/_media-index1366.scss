@@ -1,0 +1,27 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 1400px) {
+    .footer {
+        &__container {
+            .footer__top {
+                margin-bottom: 44px;
+                .footer__wrap {
+                    max-width: 335px;
+                    .footer__ageLimit {
+                        bottom: 0;
+                    }
+
+                    &:last-child {
+                        gap: 43px;
+                        .nav {
+                            &__list {
+                                gap: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

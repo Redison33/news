@@ -1,0 +1,192 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 1600px) {
+    .container {
+        padding: 0 80px;
+        max-width: unset;
+    }
+
+    .header {
+        &__wrap {
+            &-top {
+                .header__container {
+                    padding: 20px 80px;
+                }
+            }
+            &-middle {
+                .header__container {
+                    padding: 18px 80px;
+                    gap: 32px;
+                    .header__logo {
+                        margin-right: 30px;
+                    }
+                }
+            }
+            &-bottom {
+                .header__container {
+                    padding: 12px 80px;
+                    gap: 44px;
+                    .header__buttons {
+                        .header__button {
+                            // white-space: nowrap;
+                            // cursor: pointer;
+                            // padding: 12px 18px;
+                            // background-color: $secondary-light;
+                            // font-size: 16px;
+                            // line-height: normal;
+                            // font-weight: 500;
+                            // color: $primary-dark;
+                            // border: 0;
+                            // border-radius: 28px;
+                            // transition: color 0.3s ease-in-out;
+                            // &:hover {
+                            //     color: $red;
+                            // }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .main {
+        display: block;
+        max-width: 100%;
+        .news {
+            max-width: 100%;
+            max-width: auto;
+            &__container {
+                .news__swiper {
+                    margin-bottom: 42px;
+                    padding-bottom: 63px;
+                    .swiper-wrapper {
+                        .slide {
+                            &__content {
+                                padding: 32px 32px 32px 0;
+                                .slide__text {
+                                    min-height: 217px;
+                                }
+                            }
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 38.4%;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .swiper-button-next {
+                        right: 38.4%;
+                        width: 40px;
+                        height: 40px;
+                    }
+                    .swiper-pagination {
+                        bottom: 5px;
+                    }
+                }
+                .news__wrap {
+                    gap: 16px;
+                    .asideInsideNews {
+                        min-width: 308px;
+                        max-width: unset;
+                        &__container {
+                            padding: 0;
+                            .card-new {
+                                display: block;
+                            }
+                            .asideInsideNews__wrap {
+                                .asideInsideNews__gratters {
+                                    height: 286px;
+
+                                    &::-webkit-scrollbar {
+                                        width: 12px;
+                                    }
+                                }
+                                .asideInsideNews__ads {
+                                    height: 286px;
+
+                                    &::-webkit-scrollbar {
+                                        width: 12px;
+                                    }
+                                }
+                            }
+                            .card {
+                                &__title {
+                                    line-height: 124%;
+                                }
+                            }
+                        }
+                    }
+                    .news__basic {
+                        max-width: 1100px;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+                        flex-basis: auto;
+                        min-width: 320px;
+                        .news__cards {
+                            margin-bottom: 16px;
+                        }
+                        .news__swiper-inside {
+                            .swiper-wrapper {
+                                .slide {
+                                    min-height: 345px;
+                                }
+                            }
+                            .swiper-button-prev {
+                                width: 40px;
+                                height: 40px;
+                                left: 34.7%;
+                            }
+                            .swiper-button-next {
+                                width: 40px;
+                                height: 40px;
+                                right: 34.7%;
+                            }
+                            .swiper-pagination {
+                                bottom: 5px;
+                            }
+                        }
+                        .news__cards-small {
+                            margin-bottom: 45px;
+                            .card__content {
+                                .card__title {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .asideNews {
+            display: none;
+        }
+    }
+    .footer {
+        &__container {
+            .footer__text {
+                line-height: 120%;
+            }
+            .footer__top {
+                margin-bottom: 30px;
+                .footer__wrap {
+                    max-width: 347px;
+                    .footer__logo {
+                        margin-bottom: 8px;
+                    }
+                    .footer__ageLimit {
+                        bottom: 17px;
+                    }
+
+                    &:last-child {
+                        gap: 53px;
+                        .nav {
+                            &__list {
+                                gap: 17px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

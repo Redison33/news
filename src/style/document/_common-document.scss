@@ -70,10 +70,13 @@ body {
                         font-size: 16px;
                         line-height: normal;
                         &__item {
-                            transition: color 0.3s ease-in-out;
-                            cursor: pointer;
-                            &:hover {
-                                color: $red;
+                            a {
+                                transition: color 0.3s ease-in-out;
+                                color: $primary-light;
+                                text-decoration: none;
+                                &:hover {
+                                    color: $red;
+                                }
                             }
                         }
                     }
@@ -124,7 +127,7 @@ body {
                     &-enter {
                         border: 2px solid $red;
                         color: $red;
-                        padding: 14px 43px;
+                        padding: 14px 32px;
                         &:hover {
                             background-color: $hover-button-bg;
                             border-color: $hover-button;
@@ -139,6 +142,9 @@ body {
                 }
                 .header__logo {
                     margin-right: 30px;
+                    img {
+                        min-width: 165px;
+                    }
                 }
                 .input__wrap {
                     position: relative;
@@ -246,7 +252,13 @@ body {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
+                    gap: 12px;
+                    overflow-x: scroll;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                     .header__button {
+                        white-space: nowrap;
                         cursor: pointer;
                         padding: 12px 18px;
                         background-color: $secondary-light;
@@ -273,6 +285,46 @@ body {
         }
     }
 }
+.breadcrumb {
+    max-width: 1488px;
+    margin: 0 auto;
+    &__list {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: normal;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 8px;
+        .breadcrumb__item {
+            a {
+                display: flex;
+                justify-content: start;
+                gap: 8px;
+                text-decoration: none;
+                color: #7d8591;
+                max-width: 434px;
+                height: 17px;
+                overflow: hidden;
+                transition: 0.3s ease-in-out;
+                span {
+                    margin: auto 0;
+                    display: inline-block;
+                    border-radius: 10px;
+                    min-width: 4px;
+                    height: 4px;
+                    background-color: #7d8591;
+                }
+                &:hover {
+                    color: $red;
+                    span {
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
 .document {
     margin-bottom: 120px;
     &__container {
@@ -289,6 +341,10 @@ body {
             margin-bottom: 48px;
             display: flex;
             gap: 12px;
+            &__title {
+                // display: block;
+                // flex: 0 0 auto;
+            }
             &__inputs {
                 position: relative;
                 background-color: $primary-light;
@@ -297,7 +353,8 @@ body {
                 width: 86.5%;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 12px;
+                // gap: 12px;
+                justify-content: space-between;
                 .filter__input {
                     outline: none;
                     padding: 14px;
@@ -308,10 +365,12 @@ body {
                     line-height: normal;
                     color: $secondary-dark;
                     &:first-child {
-                        width: 72.17%;
+                        width: 74.81%;
+                        margin-bottom: 12px;
                     }
                     &:nth-child(2) {
-                        width: 26.85%;
+                        width: 24.21%;
+                        margin-bottom: 12px;
                     }
                     &:nth-child(n + 3) {
                         width: 32.68%;
@@ -533,10 +592,13 @@ body {
                             font-size: 18px;
                             line-height: normal;
                             .list__item {
-                                cursor: pointer;
-                                transition: color 0.3s ease-in-out;
-                                &:hover {
-                                    color: $red;
+                                a {
+                                    transition: color 0.3s ease-in-out;
+                                    color: $primary-light;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $red;
+                                    }
                                 }
                             }
                         }

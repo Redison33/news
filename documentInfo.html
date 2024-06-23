@@ -21,14 +21,14 @@
                         <div class="header__container container">
                             <nav class="header__nav nav">
                                 <ul class="nav__list list">
-                                    <li class="list__item item">Редакция</li>
-                                    <li class="list__item item">Реклама</li>
-                                    <li class="list__item item">Пресс-центр</li>
-                                    <li class="list__item item">Обратная связь</li>
-                                    <li class="list__item item">Контакты</li>
-                                    <li class="list__item item">Архив</li>
-                                    <li class="list__item item">История газеты</li>
-                                    <li class="list__item item">Документы</li>
+                                    <li class="list__item item"><a href="">Редакция</a></li>
+                                    <li class="list__item item"><a href="">Реклама</a></li>
+                                    <li class="list__item item"><a href="">Пресс-центр</a></li>
+                                    <li class="list__item item"><a href="">Обратная связь</a></li>
+                                    <li class="list__item item"><a href="">Контакты</a></li>
+                                    <li class="list__item item"><a href="">Архив</a></li>
+                                    <li class="list__item item"><a href="">История газеты</a></li>
+                                    <li class="list__item item"><a href="">Документы</a></li>
                                 </ul>
                             </nav>
                             <a href="tel:+74922531351" class="header__phone">8 (4922) 53-13-51</a>
@@ -91,6 +91,22 @@
                     </div>
                 </header>
                 <main>
+                    <nav aria-label="breadcrumb" class="breadcrumb">
+                        <ol class="breadcrumb__list">
+                            <li class="breadcrumb__item"><a href="index.html">Главная</a></li>
+                            <li class="breadcrumb__item">
+                                <a href="documnet.html"><span></span>Официальные документы</a>
+                            </li>
+                            <li class="breadcrumb__item" aria-current="page">
+                                <a href="">
+                                    <span></span>
+                                    О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными
+                                    участками с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной
+                                    до ул. Центральной северной части микрорайона Коммунар в г. Владимире
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
                     <section class="documentInfo">
                         <div class="documentInfo__container container">
                             <h2 class="documentInfo__title">
@@ -104,40 +120,105 @@
                                         Номер документа
                                         <span>№1</span>
                                     </div>
+                                    <div class="info__type">
+                                        Тип документа
+                                        <span><span></span>Постановление председателя Совета народных депутатов</span>
+                                    </div>
                                     <div class="info__date">
                                         Дата принятия
                                         <span>12.04.2024</span>
                                     </div>
-                                    <div class="info__type">
-                                        Тип документа
-                                        <span>Постановление председателя Совета народных депутатов</span>
-                                    </div>
                                     <div class="info__corp">
                                         Принявший орган
-                                        <span>Структурные подразделения администрации г. Владимира</span>
+                                        <span><span></span>Структурные подразделения администрации г. Владимира</span>
                                     </div>
                                 </div>
                                 <div class="card__loading loading">
                                     <h3 class="loading__title">Присоединенные файлы:</h3>
                                     <div class="loading__wrap">
                                         <p class="loading__text">13.06.2024 / 14:18</p>
-                                        <input type="file" name="" id="" class="loading__input" />
+                                        <label for="copyFile" id="test">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                                    stroke="#868599"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                            Отсканированная копия оригинала
+                                            <span></span>
+                                        </label>
+                                        <input type="file" name="" id="copyFile" class="loading__input" />
                                     </div>
                                     <div class="loading__wrap">
                                         <p class="loading__text">13.06.2024 / 14:18</p>
-                                        <input type="file" name="" id="" class="loading__input" />
+                                        <label for="textDoc">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                                    stroke="#868599"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                            Текст документа
+                                            <span></span>
+                                        </label>
+                                        <input type="file" name="" id="textDoc" class="loading__input" />
                                     </div>
                                     <div class="loading__wrap">
                                         <p class="loading__text">13.06.2024 / 14:18</p>
-                                        <input type="file" name="" id="" class="loading__input" />
+                                        <label for="app1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                                    stroke="#868599"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                            Приложение №1
+                                            <span></span>
+                                        </label>
+                                        <input type="file" name="" id="app1" class="loading__input" />
                                     </div>
                                     <div class="loading__wrap">
                                         <p class="loading__text">13.06.2024 / 14:18</p>
-                                        <input type="file" name="" id="" class="loading__input" />
+                                        <label for="app2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                                    stroke="#868599"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                            Приложение №2
+                                            <span></span>
+                                        </label>
+                                        <input type="file" name="" id="app2" class="loading__input" />
                                     </div>
                                     <div class="loading__wrap">
                                         <p class="loading__text">13.06.2024 / 14:18</p>
-                                        <input type="file" name="" id="" class="loading__input" />
+                                        <label for="app3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                                <path
+                                                    d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
+                                                    stroke="#868599"
+                                                    stroke-width="1.5"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                            Приложение №3
+                                            <span></span>
+                                        </label>
+                                        <input type="file" name="" id="app3" class="loading__input" />
                                     </div>
                                 </div>
                                 <p class="card__date">Опубликовано: 19.03.2024</p>
@@ -173,27 +254,27 @@
                             <div class="footer__wrap">
                                 <nav class="footer__nav nav">
                                     <ul class="nav__list list">
-                                        <li class="list__item">Редакция</li>
-                                        <li class="list__item">Реклама</li>
-                                        <li class="list__item">Пресс-центр</li>
-                                        <li class="list__item">Обратная связь</li>
-                                        <li class="list__item">Контакты</li>
-                                        <li class="list__item">Архив</li>
-                                        <li class="list__item">История газеты</li>
+                                        <li class="list__item item"><a href="">Редакция</a></li>
+                                        <li class="list__item item"><a href="">Реклама</a></li>
+                                        <li class="list__item item"><a href="">Пресс-центр</a></li>
+                                        <li class="list__item item"><a href="">Обратная связь</a></li>
+                                        <li class="list__item item"><a href="">Контакты</a></li>
+                                        <li class="list__item item"><a href="">Архив</a></li>
+                                        <li class="list__item item"><a href="">История газеты</a></li>
                                     </ul>
                                 </nav>
                                 <nav class="footer__nav nav">
                                     <ul class="nav__list list">
-                                        <li class="list__item">Город</li>
-                                        <li class="list__item">Важные новости</li>
-                                        <li class="list__item">О здоровье</li>
-                                        <li class="list__item">Эксклюзив</li>
-                                        <li class="list__item">Спорт</li>
-                                        <li class="list__item">Финансы</li>
-                                        <li class="list__item">Еда</li>
-                                        <li class="list__item">Экономика</li>
-                                        <li class="list__item">В мире</li>
-                                        <li class="list__item">Происшествие</li>
+                                        <li class="list__item"><a href="">Город</a></li>
+                                        <li class="list__item"><a href="">Важные новости</a></li>
+                                        <li class="list__item"><a href="">О здоровье</a></li>
+                                        <li class="list__item"><a href="">Эксклюзив</a></li>
+                                        <li class="list__item"><a href="">Спорт</a></li>
+                                        <li class="list__item"><a href="">Финансы</a></li>
+                                        <li class="list__item"><a href="">Еда</a></li>
+                                        <li class="list__item"><a href="">Экономика</a></li>
+                                        <li class="list__item"><a href="">В мире</a></li>
+                                        <li class="list__item"><a href="">Происшествие</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -206,7 +287,7 @@
                         </div>
                     </div>
                 </footer>
-                <script src="./src/js/document.js"></script>
+                <script src="./src/js/documentInfo.js"></script>
             </body>
         </html>
     </body>

@@ -70,10 +70,13 @@ body {
                         font-size: 16px;
                         line-height: normal;
                         &__item {
-                            transition: color 0.3s ease-in-out;
-                            cursor: pointer;
-                            &:hover {
-                                color: $red;
+                            a {
+                                transition: color 0.3s ease-in-out;
+                                color: $primary-light;
+                                text-decoration: none;
+                                &:hover {
+                                    color: $red;
+                                }
                             }
                         }
                     }
@@ -124,7 +127,7 @@ body {
                     &-enter {
                         border: 2px solid $red;
                         color: $red;
-                        padding: 14px 43px;
+                        padding: 14px 32px;
                         &:hover {
                             background-color: $hover-button-bg;
                             border-color: $hover-button;
@@ -139,6 +142,9 @@ body {
                 }
                 .header__logo {
                     margin-right: 30px;
+                    img {
+                        min-width: 165px;
+                    }
                 }
                 .input__wrap {
                     position: relative;
@@ -246,7 +252,13 @@ body {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;
+                    gap: 12px;
+                    overflow-x: scroll;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
                     .header__button {
+                        white-space: nowrap;
                         cursor: pointer;
                         padding: 12px 18px;
                         background-color: $secondary-light;
@@ -287,6 +299,7 @@ body {
                 margin-bottom: 42px;
                 .swiper-wrapper {
                     .slide {
+                        text-decoration: none;
                         display: flex;
                         gap: 32px;
                         background-color: #f4f6f9;
@@ -354,15 +367,6 @@ body {
                             }
                         }
                     }
-                    // &:hover {
-                    //     .slide {
-                    //         &__content {
-                    //             .slide__title {
-                    //                 background-color: $red;
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
                 .swiper-button-prev {
                     width: 36px;
@@ -424,6 +428,59 @@ body {
                     max-width: 285px;
                     // width: 285px;
                     &__container {
+                        .card-new {
+                            display: none;
+                            padding: 16px;
+                            margin-bottom: 32px;
+                            .card__info {
+                                display: inline-block;
+                                font-size: 12px;
+                                font-weight: 500;
+                                line-height: normal;
+                                color: $green;
+                                padding: 8px 16px;
+                                background-color: $green-light;
+                                border-radius: 28px;
+                                margin-bottom: 8px;
+                            }
+                            .card__number {
+                                font-size: 18px;
+                                font-weight: 600;
+                                line-height: normal;
+                                color: $primary-dark;
+                                margin-bottom: 16px;
+                            }
+                            .card__img {
+                                background-color: $primary-light;
+                                border-radius: 16px;
+                                margin-bottom: 16px;
+                                height: 282px;
+                            }
+                            .card__button {
+                                text-decoration: none;
+                                display: block;
+                                cursor: pointer;
+                                border: 2px solid $red;
+                                border-radius: 6px;
+                                background-color: $primary-light;
+                                color: $red;
+                                padding: 13px 102px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                line-height: normal;
+                                transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+                                &:hover {
+                                    border-color: $hover-button;
+                                    color: $hover-button;
+                                    background-color: $hover-button-bg;
+                                }
+                                &:active {
+                                    border-color: $active-button;
+                                    color: $active-button;
+                                    background-color: $active-button-bg;
+                                }
+                            }
+                        }
                         .asideInsideNews__wrap {
                             padding: 16px;
                             margin-bottom: 16px;
@@ -432,7 +489,7 @@ body {
                             transition: background-color 0.3s ease-in-out;
                             .asideInsideNews__button {
                                 cursor: pointer;
-                                width: 253px;
+                                width: 100%;
                                 display: flex;
                                 align-items: center;
                                 // gap: 8px;
@@ -565,6 +622,7 @@ body {
                             }
                         }
                         .card {
+                            text-decoration: none;
                             border-radius: 16px;
                             background-color: #f4f6f9;
                             &__img {
@@ -593,8 +651,10 @@ body {
                         .asideInsideNews__cards {
                             margin-top: 16px;
                             border-top: 1px solid $grey-light;
+                            padding: 0 16px;
                             padding-top: 32px;
                             .cardSmall {
+                                text-decoration: none;
                                 display: flex;
                                 gap: 12px;
                                 align-items: center;
@@ -608,6 +668,7 @@ body {
                                     background-color: #f4f6f9;
                                 }
                                 &__title {
+                                    color: $secondary-dark;
                                     margin: 0;
                                     padding: 0;
                                     font-size: 14px;
@@ -635,6 +696,7 @@ body {
                     .news__cards {
                         margin-bottom: 32px;
                         .card {
+                            text-decoration: none;
                             display: flex;
                             // gap: 16px;
                             background-color: #f4f6f9;
@@ -687,14 +749,26 @@ body {
                                     color: $secondary-dark;
                                     font-size: 18px;
                                     font-weight: 700;
-                                    line-height: normal;
+                                    line-height: 105%;
                                     margin-bottom: 12px;
                                     transition: color 0.3s ease-in-out;
+                                    height: 56px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 3;
+                                    -webkit-box-orient: vertical;
                                 }
                                 .card__text {
                                     font-size: 16px;
                                     line-height: normal;
                                     color: #414040;
+                                    height: 101px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 5;
+                                    -webkit-box-orient: vertical;
                                 }
                             }
                             &:not(:last-child) {
@@ -808,7 +882,11 @@ body {
                         display: flex;
                         gap: 16px;
                         margin-bottom: 42px;
+                        overflow-x: scroll;
                         .card {
+                            max-width: 274px;
+                            min-width: 274px;
+                            text-decoration: none;
                             background-color: #f4f6f9;
                             border-radius: 16px;
                             &__img {
@@ -890,6 +968,7 @@ body {
         &__container {
             .card {
                 // width: 100%;
+                text-decoration: none;
                 border-radius: 16px;
                 background-color: #f4f6f9;
                 margin-bottom: 16px;
@@ -934,6 +1013,7 @@ body {
                         background-color: $primary-light;
                         border-radius: 16px;
                         margin-bottom: 16px;
+                        height: 282px;
                     }
                     .card__button {
                         text-decoration: none;
@@ -1048,6 +1128,9 @@ body {
                 }
                 &:nth-child(2) {
                     position: relative;
+                    .footer__logo {
+                        display: none;
+                    }
                     .footer__text {
                         font-weight: 500;
                         &:not(:last-child) {
@@ -1056,6 +1139,13 @@ body {
                         &:nth-child(4n) {
                             margin-bottom: 32px;
                         }
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                    .footer__text-name {
+                        display: none;
+                        margin-bottom: 32px;
                     }
                 }
                 &:last-child {
@@ -1073,10 +1163,13 @@ body {
                             font-size: 18px;
                             line-height: normal;
                             .list__item {
-                                cursor: pointer;
-                                transition: color 0.3s ease-in-out;
-                                &:hover {
-                                    color: $red;
+                                a {
+                                    transition: color 0.3s ease-in-out;
+                                    color: $primary-light;
+                                    text-decoration: none;
+                                    &:hover {
+                                        color: $red;
+                                    }
                                 }
                             }
                         }
@@ -1087,6 +1180,9 @@ body {
         .footer__bottom {
             display: flex;
             gap: 32px;
+            .footer__text {
+                font-size: 14px;
+            }
         }
     }
 }
