@@ -71,6 +71,29 @@
                 }
             }
         }
+        .header__menu {
+            width: 100%;
+            padding: 32px 12px;
+            .header__logo {
+                display: none;
+            }
+            .list {
+                width: 100%;
+                &-2 {
+                    display: none;
+                    width: 100%;
+                    right: 0px;
+                }
+                &-3 {
+                    display: none;
+                    width: 100%;
+                    right: 0;
+                }
+            }
+            .header__button {
+                display: block;
+            }
+        }
     }
     .main {
         margin-bottom: 42px;

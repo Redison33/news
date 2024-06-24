@@ -37,6 +37,23 @@
                 }
             }
         }
+        .header__menu {
+            padding: 48px 16px;
+            .list {
+                width: 364px;
+                &-2 {
+                    padding: 16px;
+                    width: 268px;
+                    right: -245px;
+                }
+                &-3 {
+                    padding: 16px;
+                    width: 268px;
+                    right: -250px;
+                    top: -16px;
+                }
+            }
+        }
     }
     .breadcrumb {
         padding: 0 16px;
@@ -67,6 +84,9 @@
                                 width: 100%;
                             }
                         }
+                        .autoComplete_wrapper {
+                            width: 100%;
+                        }
                     }
                     .filter__buttons {
                         flex-direction: row;
@@ -74,6 +94,16 @@
                         .filter__button {
                             width: 50%;
                         }
+                    }
+                }
+            }
+            .document__cards {
+                .card {
+                    &__info {
+                        overflow-x: scroll;
+                    }
+                    &__files {
+                        overflow-x: scroll;
                     }
                 }
             }

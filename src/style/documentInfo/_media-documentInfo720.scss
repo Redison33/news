@@ -67,6 +67,19 @@
                 }
             }
         }
+        .header__menu {
+            .list {
+                width: 250px;
+                &-2 {
+                    width: 200px;
+                    right: -185px;
+                }
+                &-3 {
+                    width: 150px;
+                    right: -150px;
+                }
+            }
+        }
     }
     .documentInfo {
         // margin-bottom: 120px;

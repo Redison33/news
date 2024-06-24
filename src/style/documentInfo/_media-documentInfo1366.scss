@@ -2,6 +2,21 @@
 @import '../_mixin.scss';
 
 @media (max-width: 1400px) {
+    .header {
+        .header__menu {
+            .list {
+                width: 350px;
+                &-2 {
+                    width: 300px;
+                    right: -275px;
+                }
+                &-3 {
+                    width: 250px;
+                    right: -245px;
+                }
+            }
+        }
+    }
     .main {
         margin-bottom: 80px;
         .news {

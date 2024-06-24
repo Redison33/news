@@ -300,7 +300,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 100;
+  height: 100vh;
   background-color: #f4f6f9;
   box-shadow: 182px 0px 51px 0px rgba(0, 0, 0, 0), 117px 0px 47px 0px rgba(0, 0, 0, 0.01), 66px 0px 39px 0px rgba(0, 0, 0, 0.05), 29px 0px 29px 0px rgba(0, 0, 0, 0.09), 7px 0px 16px 0px rgba(0, 0, 0, 0.1);
   padding: 48px 48px 160px 48px;
@@ -332,19 +333,29 @@ body {
   justify-content: space-between;
   transition: color 0.3s ease-in-out;
 }
+.header .header__menu .list__item .item__button svg path {
+  transition: stroke 0.3s ease-in-out;
+}
 .header .header__menu .list__item .item__button:hover {
   color: #d6383c;
+}
+.header .header__menu .list__item .item__button:hover svg path {
+  stroke: #d6383c;
+}
+.header .header__menu .list__item .item__button--active svg path {
+  stroke: #d6383c;
 }
 .header .header__menu .list__item:not(:last-child) {
   margin-bottom: 4px;
 }
 .header .header__menu .list-2 {
-  width: 530px;
+  border-radius: 8px;
+  width: 578px;
   padding: 24px;
   position: absolute;
   background-color: #ffffff;
   border-radius: 8px;
-  right: -515px;
+  right: -545px;
   top: 0;
   z-index: 1000;
 }
@@ -368,12 +379,44 @@ body {
   margin-bottom: 4px;
 }
 .header .header__menu .list-3 {
-  width: 270px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 318px;
   position: absolute;
   background-color: #ffffff;
   border-radius: 8px;
-  right: -285px;
-  top: 0;
+  right: -305px;
+  top: -24px;
+}
+.header .header__menu .list-3 .list__item {
+  padding: 0;
+}
+.header .header__menu .list-3 .list__item .item__button {
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 14px;
+  color: #0e0d35;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__menu .list-3 .list__item .item__button:hover {
+  color: #d6383c;
+}
+.header .header__menu .list-3 .list__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+.header .header__menu .header__button {
+  display: none;
+  width: 100%;
+  padding: 14px 32px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 16px;
+  color: #9f9eae;
+  font-weight: 500;
+  line-height: 20px;
 }
 .header .header__menu--active {
   display: block;
@@ -385,6 +428,17 @@ body {
   display: flex;
   gap: 32px;
   margin-bottom: 120px;
+}
+.main .menu__overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.5;
+  z-index: 10;
 }
 .main .news {
   max-width: 1171px;
@@ -1378,6 +1432,17 @@ body {
   }
 }
 @media (max-width: 1400px) {
+  .header .header__menu .list {
+    width: 350px;
+  }
+  .header .header__menu .list-2 {
+    width: 300px;
+    right: -275px;
+  }
+  .header .header__menu .list-3 {
+    width: 250px;
+    right: -245px;
+  }
   .footer__container .footer__top {
     margin-bottom: 44px;
   }
@@ -1417,6 +1482,23 @@ body {
   }
   .header__wrap-bottom .header__container {
     padding: 10px 16px;
+  }
+  .header .header__menu {
+    padding: 48px 16px;
+  }
+  .header .header__menu .list {
+    width: 364px;
+  }
+  .header .header__menu .list-2 {
+    padding: 16px;
+    width: 268px;
+    right: -245px;
+  }
+  .header .header__menu .list-3 {
+    padding: 16px;
+    width: 268px;
+    right: -250px;
+    top: -16px;
   }
   .main {
     display: block;
@@ -1629,6 +1711,17 @@ body {
   .header__wrap-bottom .header__container .header__buttons .header__button {
     font-size: 14px;
   }
+  .header .header__menu .list {
+    width: 250px;
+  }
+  .header .header__menu .list-2 {
+    width: 200px;
+    right: -185px;
+  }
+  .header .header__menu .list-3 {
+    width: 150px;
+    right: -150px;
+  }
   .main .news__container .news__swiper .swiper-wrapper .slide {
     gap: 12px;
   }
@@ -1777,6 +1870,29 @@ body {
   }
   .header__wrap-bottom-visible {
     transform: translateY(-90px);
+  }
+  .header .header__menu {
+    width: 100%;
+    padding: 32px 12px;
+  }
+  .header .header__menu .header__logo {
+    display: none;
+  }
+  .header .header__menu .list {
+    width: 100%;
+  }
+  .header .header__menu .list-2 {
+    display: none;
+    width: 100%;
+    right: 0px;
+  }
+  .header .header__menu .list-3 {
+    display: none;
+    width: 100%;
+    right: 0;
+  }
+  .header .header__menu .header__button {
+    display: block;
   }
   .main {
     margin-bottom: 42px;
