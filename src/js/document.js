@@ -2,9 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerMiddle = document.querySelector('.header__wrap-middle');
     const headerBottom = document.querySelector('.header__wrap-bottom');
     const header = document.querySelector('.header');
+    const filterButton = document.querySelector('.document__button');
 
     window.addEventListener('scroll', handleScroll);
-
+    filterButton.addEventListener('click', () => {
+        // document.querySelector('.filter').classList.toggle('filter--active');
+        // document.querySelector('.filter').classList.toggle('filter--active');
+        document.querySelector('.filter').classList.add('filter--active');
+        document.querySelector('.filter__overlay').style.display = 'block';
+        document.querySelector('body').style.overflow = 'hidden';
+    });
+    document.querySelector('.filter__overlay').addEventListener('click', () => {
+        document.querySelector('.filter').classList.remove('filter--active');
+        document.querySelector('.filter__overlay').style.display = 'none';
+        document.querySelector('body').style.overflow = 'visible';
+    });
     function handleScroll() {
         const scrollTop = document.documentElement.scrollTop;
 

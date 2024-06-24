@@ -38,7 +38,47 @@
             }
         }
     }
-
+    .breadcrumb {
+        padding: 0 16px;
+    }
+    .document {
+        margin-bottom: 80px;
+        &__container {
+            .document__title {
+                font-size: 42px;
+            }
+            .filter {
+                &__wrap {
+                    flex-direction: column;
+                    .filter__inputs {
+                        width: 100%;
+                        gap: 12px;
+                        padding: 12px;
+                        .filter__input {
+                            &:first-child {
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(2) {
+                                width: 100%;
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(n + 3) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .filter__buttons {
+                        flex-direction: row;
+                        padding: 12px;
+                        .filter__button {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .footer {
         padding: 42px 0;
         &__container {

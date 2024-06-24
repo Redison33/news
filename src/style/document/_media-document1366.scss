@@ -35,6 +35,25 @@
             display: none;
         }
     }
+    .document {
+        &__container {
+            .filter {
+                &__wrap {
+                    .filter__inputs {
+                        position: relative;
+                        .filter__input {
+                            &:first-child {
+                                width: 66.23%;
+                            }
+                            &:nth-child(2) {
+                                width: 32.68%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     .footer {
         &__container {
             .footer__top {

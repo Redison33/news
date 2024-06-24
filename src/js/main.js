@@ -14,7 +14,63 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerMiddle = document.querySelector('.header__wrap-middle');
     const headerBottom = document.querySelector('.header__wrap-bottom');
     const header = document.querySelector('.header');
+    const headerButtonMenu = document.querySelector('.header__button-menu');
+    const headerMenu = document.querySelector('.header__menu');
+    let flag = false;
 
+    headerButtonMenu.addEventListener('click', () => {
+        headerMenu.classList.add('header__menu--active');
+        // headerButtonMenu.classList.add('header__button-menu--active');
+    });
+    for (const item of headerMenu.querySelector('.list-1').querySelectorAll('.item')) {
+        item.querySelector('.item__button').addEventListener('click', (e) => {
+            for (const item of headerMenu.querySelector('.list-1').querySelectorAll('.item')) {
+                item.querySelector('.item__button').removeAttribute('style');
+            }
+            if (document.querySelector('.list-2')) document.querySelector('.list-2').remove();
+            item.querySelector('.item__button').style.color = '#d6383c';
+            let ul = document.createElement('ul');
+            for (let i = 0; i < 14; i++) {
+                let li = document.createElement('li');
+                let button = document.createElement('button');
+                button.textContent = 'Кнопка';
+                button.classList.add('button-reset', 'item__button', 'item__button-2');
+                li.classList.add('list__item', 'item');
+                li.append(button);
+                ul.appendChild(li);
+            }
+            ul.classList.add('list', 'list-2');
+            item.append(ul);
+            test();
+        });
+    }
+
+    function test() {
+        if (headerMenu.querySelector('.list-2')) {
+            console.log(headerMenu.querySelector('.list-2'));
+            for (const item of headerMenu.querySelector('.list-2').querySelectorAll('.item')) {
+                item.querySelector('.item__button').addEventListener('click', (e) => {
+                    for (const item of headerMenu.querySelector('.list-2').querySelectorAll('.item')) {
+                        item.querySelector('.item__button').removeAttribute('style');
+                    }
+                    if (document.querySelector('.list-3')) document.querySelector('.list-3').remove();
+                    item.querySelector('.item__button').style.color = '#d6383c';
+                    let ul = document.createElement('ul');
+                    for (let i = 0; i < 3; i++) {
+                        let li = document.createElement('li');
+                        let button = document.createElement('button');
+                        button.textContent = 'Кнопка';
+                        button.classList.add('button-reset', 'item__button', 'item__button-3');
+                        li.classList.add('list__item');
+                        li.append(button);
+                        ul.appendChild(li);
+                    }
+                    ul.classList.add('list', 'list-3');
+                    item.append(ul);
+                });
+            }
+        }
+    }
     window.addEventListener('scroll', handleScroll);
 
     function handleScroll() {
@@ -53,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.removeAttribute('style');
         }
     }
+
     const newsSwiper = new Swiper('.news__swiper', {
         direction: 'horizontal',
         slidesPerView: 1,

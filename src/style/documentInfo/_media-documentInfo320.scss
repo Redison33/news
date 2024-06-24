@@ -1,0 +1,174 @@
+@import '../_vars.scss';
+@import '../_mixin.scss';
+
+@media (max-width: 680px) {
+    .container {
+        padding: 0 12px;
+    }
+    .header {
+        &__wrap {
+            &-top {
+                .header__container {
+                    justify-content: center;
+                    padding: 19px 16px;
+                    .header__logo {
+                        display: block;
+                    }
+                    .nav {
+                        display: none;
+                    }
+                    .header__phone {
+                        display: none;
+                    }
+                }
+            }
+            &-middle {
+                .header__container {
+                    padding: 12px 16px;
+                    .header__button-menu {
+                        background-color: transparent;
+                        padding: 5px;
+                        svg {
+                            path {
+                                stroke: $red;
+                            }
+                        }
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                    .header__logo {
+                        display: none;
+                    }
+                    .input__wrap {
+                        display: none;
+                    }
+                    .header__button-enter {
+                        padding: 4px 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            &-bottom {
+                .header__container {
+                    padding: 11px 16px;
+                    gap: 32px;
+                    .switch {
+                        display: none;
+                    }
+                    .header__buttons {
+                        .header__button {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-visible-start {
+                    position: fixed;
+                    top: 56px;
+                }
+                &-visible {
+                    transform: translateY(-90px);
+                }
+            }
+        }
+    }
+    .breadcrumb {
+        padding: 0 12px;
+        margin-bottom: 18px;
+        &__list {
+            flex-wrap: wrap;
+        }
+    }
+    .documentInfo {
+        margin-bottom: 42px;
+        &__container {
+            .documentInfo__title {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+            .card {
+                padding: 12px;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    &__number {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 4px;
+                    }
+                    &__type {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 4px;
+                    }
+                    &__date {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 4px;
+                    }
+                    &__corp {
+                        flex-direction: column;
+                        align-items: start;
+                        gap: 4px;
+                    }
+                }
+                .loading {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px;
+                    &__wrap {
+                        label {
+                            white-space: nowrap;
+                            font-size: 12px;
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        &__container {
+            .footer__top {
+                margin-bottom: 32px;
+                .footer__wrap {
+                    .footer__button {
+                        display: flex;
+                    }
+                    &:last-child {
+                        display: none;
+                    }
+                    &:first-child {
+                        display: block;
+                        .footer__text {
+                            font-size: 12px;
+                            &:not(:last-child) {
+                                margin-bottom: 12px;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-bottom: 32px;
+                        .footer__text {
+                            &:nth-child(6) {
+                                margin-bottom: 24px;
+                            }
+                            &:nth-child(7) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer__bottom {
+                display: block;
+                .footer__text {
+                    font-size: 10px;
+                    &:first-child {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

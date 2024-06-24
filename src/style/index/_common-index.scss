@@ -58,6 +58,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px 0;
+                .header__logo {
+                    display: none;
+                }
                 .nav {
                     color: $primary-light;
                     .list {
@@ -282,6 +285,94 @@ body {
             &-visible {
                 transform: translateY(-90px);
             }
+        }
+    }
+    .header__menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #f4f6f9;
+        box-shadow: 182px 0px 51px 0px rgba(0, 0, 0, 0), 117px 0px 47px 0px rgba(0, 0, 0, 0.01), 66px 0px 39px 0px rgba(0, 0, 0, 0.05),
+            29px 0px 29px 0px rgba(0, 0, 0, 0.09), 7px 0px 16px 0px rgba(0, 0, 0, 0.1);
+        padding: 48px 48px 160px 48px;
+        .header__logo {
+            margin-bottom: 32px;
+            display: block;
+        }
+        .list {
+            list-style: none;
+            width: 512px;
+            padding: 0;
+            position: relative;
+            &__item {
+                padding: 0;
+                position: relative;
+                .item__button {
+                    width: 100%;
+                    background-color: $primary-light;
+                    border-radius: 8px;
+                    padding: 16px 32px;
+                    font-size: 16px;
+                    color: $secondary-dark;
+                    font-weight: 500;
+                    line-height: normal;
+                    display: flex;
+                    justify-content: space-between;
+                    transition: color 0.3s ease-in-out;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+            &-2 {
+                // display: none;
+                width: 530px;
+                padding: 24px;
+                position: absolute;
+                background-color: $primary-light;
+                border-radius: 8px;
+                right: -515px;
+                top: 0;
+                z-index: 1000;
+                .list__item {
+                    padding: 0;
+                    .item__button {
+                        // width: 100%;
+                        // background-color: $primary-light;
+                        border-radius: 8px;
+                        padding: 4px 12px;
+                        font-size: 14px;
+                        color: $secondary-dark;
+                        font-weight: 500;
+                        line-height: normal;
+                        display: flex;
+                        justify-content: space-between;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+            &-3 {
+                // display: none;
+                width: 270px;
+                position: absolute;
+                background-color: $primary-light;
+                border-radius: 8px;
+                right: -285px;
+                top: 0;
+            }
+        }
+        &--active {
+            display: block;
         }
     }
 }
@@ -1097,6 +1188,21 @@ body {
             font-size: 16px;
             line-height: normal;
             font-weight: 400;
+        }
+        .footer__button {
+            display: none;
+            width: 100%;
+            background-color: $red;
+            font-size: 16px;
+            color: $primary-light;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 14px;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 32px;
         }
         .footer__top {
             display: flex;

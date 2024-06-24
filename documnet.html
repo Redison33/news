@@ -11,6 +11,7 @@
         <header class="header max-container">
             <div class="header__wrap header__wrap-top header__wrap-top-visible">
                 <div class="header__container container">
+                    <a href="index.html" class="header__logo"><img src="./src/img/logo.png" alt="" /></a>
                     <nav class="header__nav nav">
                         <ul class="nav__list list">
                             <li class="list__item item"><a href="">Редакция</a></li>
@@ -38,9 +39,9 @@
                                 stroke-linejoin="round"
                             />
                         </svg>
-                        Меню
+                        <span>Меню</span>
                     </button>
-                    <a href="index.html"><img src="./src/img/logo.png" alt="" class="header__logo" /></a>
+                    <a href="index.html" class="header__logo"><img src="./src/img/logo.png" alt="" /></a>
                     <div class="input__wrap">
                         <input type="text" class="header__input" placeholder="Поиск" />
                         <button class="input__button button-reset">
@@ -83,6 +84,7 @@
             </div>
         </header>
         <main>
+            <div class="filter__overlay"></div>
             <nav aria-label="breadcrumb" class="breadcrumb">
                 <ol class="breadcrumb__list">
                     <li class="breadcrumb__item"><a href="index.html">Главная</a></li>
@@ -94,18 +96,32 @@
             <section class="document">
                 <div class="document__container container">
                     <h1 class="document__title">Официальные документы</h1>
+                    <button class="document__button button-reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                            <path
+                                d="M2.16669 3.83333C2.16669 3.36662 2.16669 3.13327 2.25751 2.95501C2.33741 2.79821 2.46489 2.67072 2.62169 2.59083C2.79995 2.5 3.03331 2.5 3.50002 2.5H17.5C17.9667 2.5 18.2001 2.5 18.3783 2.59083C18.5351 2.67072 18.6626 2.79821 18.7425 2.95501C18.8334 3.13327 18.8334 3.36662 18.8334 3.83333V4.39116C18.8334 4.61516 18.8334 4.72716 18.806 4.8313C18.7817 4.92359 18.7418 5.01103 18.6879 5.0898C18.6272 5.17869 18.5425 5.25204 18.3733 5.39875L13.0434 10.0179C12.8742 10.1646 12.7895 10.238 12.7288 10.3269C12.6749 10.4056 12.635 10.4931 12.6107 10.5854C12.5834 10.6895 12.5834 10.8015 12.5834 11.0255V15.382C12.5834 15.5449 12.5834 15.6264 12.5571 15.6969C12.5338 15.7591 12.4961 15.8149 12.4469 15.8596C12.3912 15.9102 12.3156 15.9404 12.1643 16.001L9.33095 17.1343C9.02466 17.2568 8.87152 17.3181 8.74858 17.2925C8.64108 17.2702 8.54673 17.2063 8.48606 17.1148C8.41669 17.0101 8.41669 16.8452 8.41669 16.5153V11.0255C8.41669 10.8015 8.41669 10.6895 8.38932 10.5854C8.36506 10.4931 8.32513 10.4056 8.27128 10.3269C8.2105 10.238 8.12587 10.1646 7.95659 10.0179L2.62678 5.39875C2.45751 5.25204 2.37287 5.17869 2.3121 5.0898C2.25824 5.01103 2.21831 4.92359 2.19406 4.8313C2.16669 4.72716 2.16669 4.61516 2.16669 4.39116V3.83333Z"
+                                stroke="white"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        Фильтр
+                    </button>
                     <div class="document__filter filter">
                         <h2 class="filter__title">Фильтр</h2>
-                        <div class="filter__inputs">
-                            <input type="text" class="filter__input" placeholder="Поиск по названию" />
-                            <input type="number" class="filter__input" placeholder="Номер документа" />
-                            <input type="text" class="filter__input" placeholder="Принявший орган" />
-                            <input type="text" class="filter__input" placeholder="Тип документа" />
-                            <input type="date" class="filter__input" />
-                        </div>
-                        <div class="filter__buttons">
-                            <button class="filter__button button-reset">Найти</button>
-                            <button class="filter__button button-reset">Сбросить</button>
+                        <div class="filter__wrap">
+                            <div class="filter__inputs">
+                                <input type="text" class="filter__input" placeholder="Поиск по названию" />
+                                <input type="number" class="filter__input" placeholder="Номер документа" />
+                                <input type="text" class="filter__input" placeholder="Принявший орган" />
+                                <input type="text" class="filter__input" placeholder="Тип документа" />
+                                <input type="date" class="filter__input" />
+                            </div>
+                            <div class="filter__buttons">
+                                <button class="filter__button button-reset">Найти</button>
+                                <button class="filter__button button-reset">Сбросить</button>
+                            </div>
                         </div>
                     </div>
                     <div class="document__cards">
@@ -183,6 +199,7 @@
                                     Приложение №3
                                 </div>
                             </div>
+                            <span class="card__date">Опубликовано: 19.03.2024</span>
                         </a>
                         <a href="documentInfo.html" class="doceument__card card">
                             <div class="card__info">
@@ -258,6 +275,7 @@
                                     Приложение №3
                                 </div>
                             </div>
+                            <span class="card__date">Опубликовано: 19.03.2024</span>
                         </a>
                         <a href="documentInfo.html" class="doceument__card card">
                             <div class="card__info">
@@ -333,6 +351,7 @@
                                     Приложение №3
                                 </div>
                             </div>
+                            <span class="card__date">Опубликовано: 19.03.2024</span>
                         </a>
                     </div>
                     <div class="document__pagination pagination">
@@ -374,7 +393,7 @@
                 <div class="footer__top">
                     <div class="footer__wrap">
                         <img src="./src/img/footer-logo.jpg" alt="" class="footer__logo" />
-                        <p class="footer__text p-reset">Сетевое издание “Владимир - это Мы”</p>
+                        <p class="footer__text p-reset footer__text-name">Сетевое издание “Владимир - это Мы”</p>
                         <p class="footer__text p-reset">
                             Все права защищены. Копирование и использование полных материалов запрещено, частичное цитирование возможно только при
                             условии гиперссылки на сайт www.владимирэтомы.рф.
@@ -385,6 +404,9 @@
                         </p>
                     </div>
                     <div class="footer__wrap">
+                        <img src="./src/img/footer-logo.jpg" alt="" class="footer__logo" />
+                        <p class="footer__text p-reset footer__text-name">Сетевое издание “Владимир - это Мы”</p>
+                        <button class="footer__button button-reset">Меню</button>
                         <p class="footer__text p-reset">Главный редактор: Боровков Р.В.</p>
                         <p class="footer__text p-reset">8 (4922) 53-13-51</p>
                         <p class="footer__text p-reset">vladimiretomy@mail.ru</p>
@@ -403,6 +425,7 @@
                                 <li class="list__item item"><a href="">Обратная связь</a></li>
                                 <li class="list__item item"><a href="">Контакты</a></li>
                                 <li class="list__item item"><a href="">Архив</a></li>
+                                <li class="list__item item"><a href="">История газеты</a></li>
                             </ul>
                         </nav>
                         <nav class="footer__nav nav">

@@ -48,7 +48,7 @@ body {
 .header {
     top: 0;
     z-index: 100;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
     &__wrap {
         position: relative;
         &-top {
@@ -58,6 +58,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px 0;
+                .header__logo {
+                    display: none;
+                }
                 .nav {
                     color: $primary-light;
                     .list {
@@ -288,7 +291,10 @@ body {
 .breadcrumb {
     max-width: 1488px;
     margin: 0 auto;
+    margin-bottom: 32px;
+
     &__list {
+        margin: 0;
         font-size: 14px;
         font-weight: 500;
         line-height: normal;
@@ -325,6 +331,17 @@ body {
         }
     }
 }
+.filter__overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #000000;
+    opacity: 0.5;
+}
 .document {
     margin-bottom: 120px;
     &__container {
@@ -337,79 +354,102 @@ body {
             margin: 0;
             margin-bottom: 42px;
         }
+        .document__button {
+            width: 100%;
+            padding: 14px 24px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            color: $primary-light;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            background-color: $red;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $hover-button;
+            }
+            &:active {
+                background-color: $active-button;
+            }
+        }
         .filter {
             margin-bottom: 48px;
-            display: flex;
-            gap: 12px;
             &__title {
-                // display: block;
-                // flex: 0 0 auto;
+                margin: 0;
+                margin-bottom: 10px;
             }
-            &__inputs {
-                position: relative;
-                background-color: $primary-light;
-                border-radius: 12px;
-                padding: 24px;
-                width: 86.5%;
+            &__wrap {
                 display: flex;
-                flex-wrap: wrap;
-                // gap: 12px;
-                justify-content: space-between;
-                .filter__input {
-                    outline: none;
-                    padding: 14px;
-                    border: 2px solid #e7e7eb;
-                    border-radius: 4px;
-                    font-size: 16px;
-                    font-weight: 400;
-                    line-height: normal;
-                    color: $secondary-dark;
-                    &:first-child {
-                        width: 74.81%;
-                        margin-bottom: 12px;
-                    }
-                    &:nth-child(2) {
-                        width: 24.21%;
-                        margin-bottom: 12px;
-                    }
-                    &:nth-child(n + 3) {
-                        width: 32.68%;
-                    }
-                    &:focus {
-                        border-color: $green;
+                gap: 12px;
+                .filter__inputs {
+                    position: relative;
+                    background-color: $primary-light;
+                    border-radius: 12px;
+                    padding: 24px;
+                    width: 86.5%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    // gap: 12px;
+                    justify-content: space-between;
+                    .filter__input {
+                        outline: none;
+                        padding: 11px;
+                        border: 2px solid #e7e7eb;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: normal;
+                        color: $secondary-dark;
+                        &:first-child {
+                            width: 74.81%;
+                            margin-bottom: 12px;
+                        }
+                        &:nth-child(2) {
+                            width: 24.21%;
+                            margin-bottom: 12px;
+                        }
+                        &:nth-child(n + 3) {
+                            width: 32.68%;
+                        }
+                        &:focus {
+                            border-color: $green;
+                        }
                     }
                 }
-            }
-            &__buttons {
-                background-color: $primary-light;
-                border-radius: 12px;
-                padding: 24px;
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-                .filter__button {
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 20px;
-                    padding: 14px 32px;
-                    color: $primary-light;
-                    background-color: $red;
-                    border-radius: 4px;
-                    transition: 0.3s ease-in-out;
-                    &:hover {
-                        background-color: $hover-button;
-                    }
-                    &:active {
-                        background-color: $active-button;
-                    }
-                    &:last-child {
-                        background-color: $secondary-light;
-                        color: #9f9eae;
+                .filter__buttons {
+                    background-color: $primary-light;
+                    border-radius: 12px;
+                    padding: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    .filter__button {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+                        padding: 14px 32px;
+                        color: $primary-light;
+                        background-color: $red;
+                        border-radius: 4px;
+                        transition: 0.3s ease-in-out;
                         &:hover {
-                            color: $hover-button;
+                            background-color: $hover-button;
                         }
                         &:active {
-                            color: $active-button;
+                            background-color: $active-button;
+                        }
+                        &:last-child {
+                            background-color: $secondary-light;
+                            color: #9f9eae;
+                            &:hover {
+                                color: $hover-button;
+                            }
+                            &:active {
+                                color: $active-button;
+                            }
                         }
                     }
                 }
@@ -420,7 +460,7 @@ body {
                 background-color: $primary-light;
                 padding: 24px;
                 border-radius: 12px;
-                height: 205px;
+                min-height: 205px;
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
@@ -430,6 +470,8 @@ body {
                 &__info {
                     display: flex;
                     gap: 4px;
+                    overflow-x: scroll;
+                    width: 100%;
                     .card__tag {
                         display: flex;
                         align-items: center;
@@ -441,6 +483,7 @@ body {
                         font-size: 14px;
                         font-weight: 400;
                         line-height: normal;
+                        white-space: nowrap;
                         span {
                             display: inline-block;
                             width: 8px;
@@ -463,8 +506,11 @@ body {
                     margin-top: auto;
                     display: flex;
                     gap: 8px;
+                    overflow-x: scroll;
+                    width: 100%;
                     .card__file {
                         display: flex;
+                        white-space: nowrap;
                         align-items: center;
                         gap: 8px;
                         padding: 16px;
@@ -475,6 +521,13 @@ body {
                         line-height: normal;
                         color: #868599;
                     }
+                }
+                &__date {
+                    text-align: end;
+                    font-size: 12px;
+                    color: #9f9eae;
+                    font-weight: 400;
+                    line-height: normal;
                 }
                 &:hover {
                     .card__title {
@@ -537,6 +590,22 @@ body {
             line-height: normal;
             font-weight: 400;
         }
+        .footer__button {
+            display: none;
+            width: 100%;
+            background-color: $red;
+            font-size: 16px;
+            color: $primary-light;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 32px;
+        }
         .footer__top {
             display: flex;
             justify-content: space-between;
@@ -567,6 +636,9 @@ body {
                 }
                 &:nth-child(2) {
                     position: relative;
+                    .footer__logo {
+                        display: none;
+                    }
                     .footer__text {
                         font-weight: 500;
                         &:not(:last-child) {
@@ -575,6 +647,13 @@ body {
                         &:nth-child(4n) {
                             margin-bottom: 32px;
                         }
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                    .footer__text-name {
+                        display: none;
+                        margin-bottom: 32px;
                     }
                 }
                 &:last-child {
@@ -609,6 +688,9 @@ body {
         .footer__bottom {
             display: flex;
             gap: 32px;
+            .footer__text {
+                font-size: 14px;
+            }
         }
     }
 }

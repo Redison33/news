@@ -68,7 +68,27 @@
             }
         }
     }
-
+    .documentInfo {
+        // margin-bottom: 120px;
+        &__container {
+            .documentInfo__title {
+            }
+            .card {
+                padding: 24px 12px;
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .loading {
+                    // padding: 12px;
+                    grid-template-columns: repeat(1, 1fr);
+                    &__title {
+                        grid-area: 1 / 1 / 2 / 1;
+                    }
+                }
+            }
+        }
+    }
     .footer {
         &__container {
             .footer__top {

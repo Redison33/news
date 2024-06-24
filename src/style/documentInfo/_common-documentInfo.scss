@@ -36,10 +36,6 @@ body {
     margin: 0;
 }
 
-// .max-container {
-//     max-width: 1920px;
-//     margin: 0 auto;
-// }
 .container {
     max-width: 1488px;
     margin: 0 auto;
@@ -48,7 +44,7 @@ body {
 .header {
     top: 0;
     z-index: 100;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
     &__wrap {
         position: relative;
         &-top {
@@ -58,6 +54,9 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px 0;
+                .header__logo {
+                    display: none;
+                }
                 .nav {
                     color: $primary-light;
                     .list {
@@ -303,7 +302,6 @@ body {
                 gap: 8px;
                 text-decoration: none;
                 color: #7d8591;
-                max-width: 434px;
                 height: 17px;
                 overflow: hidden;
                 transition: 0.3s ease-in-out;
@@ -320,6 +318,11 @@ body {
                     span {
                         background-color: $red;
                     }
+                }
+            }
+            &:last-child {
+                a {
+                    max-width: 434px;
                 }
             }
         }
@@ -408,7 +411,7 @@ body {
                         span {
                             display: inline-block;
                             padding: 0;
-                            width: 8px;
+                            min-width: 8px;
                             height: 8px;
                             border-radius: 8px;
                             background-color: #8b89f1;
@@ -437,7 +440,7 @@ body {
                         span {
                             display: inline-block;
                             padding: 0;
-                            width: 8px;
+                            min-width: 8px;
                             height: 8px;
                             border-radius: 8px;
                             background-color: #f189e3;
@@ -505,6 +508,7 @@ body {
                 }
             }
             &__date {
+                margin: 0;
                 font-size: 12px;
                 color: #9f9eae;
                 font-weight: 400;
@@ -522,6 +526,22 @@ body {
             font-size: 16px;
             line-height: normal;
             font-weight: 400;
+        }
+        .footer__button {
+            display: none;
+            width: 100%;
+            background-color: $red;
+            font-size: 16px;
+            color: $primary-light;
+            font-weight: 500;
+            line-height: 20px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+            border-radius: 4px;
+            margin-bottom: 32px;
         }
         .footer__top {
             display: flex;
@@ -553,6 +573,9 @@ body {
                 }
                 &:nth-child(2) {
                     position: relative;
+                    .footer__logo {
+                        display: none;
+                    }
                     .footer__text {
                         font-weight: 500;
                         &:not(:last-child) {
@@ -561,6 +584,13 @@ body {
                         &:nth-child(4n) {
                             margin-bottom: 32px;
                         }
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                    .footer__text-name {
+                        display: none;
+                        margin-bottom: 32px;
                     }
                 }
                 &:last-child {
@@ -595,6 +625,9 @@ body {
         .footer__bottom {
             display: flex;
             gap: 32px;
+            .footer__text {
+                font-size: 14px;
+            }
         }
     }
 }
