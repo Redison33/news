@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         headerMenu.classList.add('header__menu--active');
         document.querySelector('body').style.overflow = 'hidden';
         menuOverlay.style.display = 'block';
+        headerMenu.classList.add('header__menu--visible');
     });
     buttonInputVisible.addEventListener('click', () => {
         document.querySelector('.input__wrap').style.display = 'block';
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuOverlay.addEventListener('click', () => {
         headerMenu.classList.remove('header__menu--active');
         document.querySelector('body').style.overflow = 'visible';
+        headerMenu.classList.remove('header__menu--visible');
         menuOverlay.style.display = 'none';
         if (document.querySelector('.list-2')) document.querySelector('.list-2').remove();
         if (document.querySelector('.list-3')) document.querySelector('.list-3').remove();
@@ -54,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBack.addEventListener('click', () => {
         headerMenu.classList.remove('header__menu--active');
         document.querySelector('body').style.overflow = 'visible';
+        headerMenu.classList.remove('header__menu--visible');
         menuOverlay.style.display = 'none';
         if (document.querySelector('.list-2')) document.querySelector('.list-2').remove();
         if (document.querySelector('.list-3')) document.querySelector('.list-3').remove();
@@ -128,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ul.appendChild(li);
             }
             ul.classList.add('list', 'list-2');
-            // window.innerWidth === 680 ? headerMenu.append(ul) : item.append(ul);
-            if (window.innerWidth === 680) {
+            // window.innerWidth <= 960 ? headerMenu.append(ul) : item.append(ul);
+            if (window.innerWidth <= 960) {
                 menuUp.style.display = 'block';
                 ul.style.overflowX = 'scroll';
                 ul.style.height = `${document.querySelector('.list-1').offsetHeight + 33}px`;
@@ -185,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ul.appendChild(li);
                     }
                     ul.classList.add('list', 'list-3');
-                    if (window.innerWidth === 680) {
+                    if (window.innerWidth <= 960) {
                         menuUp.style.display = 'block';
                         ul.style.overflowX = 'scroll';
                         ul.style.height = `${document.querySelector('.list-2').offsetHeight}px`;
@@ -231,4 +234,10 @@ document.addEventListener('DOMContentLoaded', () => {
             header.removeAttribute('style');
         }
     }
+    document.querySelector('.header__buttons').addEventListener('wheel', function (event) {
+        if (event.deltaY !== 0) {
+            event.preventDefault();
+            this.scrollLeft += event.deltaY;
+        }
+    });
 });

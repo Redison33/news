@@ -44,12 +44,12 @@
                 &-2 {
                     padding: 16px;
                     width: 268px;
-                    right: -245px;
+                    right: -280px;
                 }
                 &-3 {
                     padding: 16px;
                     width: 268px;
-                    right: -250px;
+                    right: -292px;
                     top: -16px;
                 }
             }
@@ -103,6 +103,9 @@
                             display: flex;
                             gap: 16px;
                             padding: 0;
+                            .asideInsideNews-line {
+                                display: none;
+                            }
                             .asideInsideNews__wrap {
                                 width: 100%;
                                 border: none;

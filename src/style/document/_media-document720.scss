@@ -68,16 +68,73 @@
             }
         }
         .header__menu {
+            width: 100%;
+            padding: 32px 12px;
+            overflow: scroll;
+            .header__logo {
+                display: none;
+            }
             .list {
-                width: 250px;
+                width: 100%;
+                // &-1 {
+                //     position: relative;
+                // }
                 &-2 {
-                    width: 200px;
-                    right: -185px;
+                    width: 100%;
+                    right: 0px;
+                    // position: static;
+                    z-index: 1;
+                    top: 0 !important;
+                    padding: 0;
+                    padding: 32px 12px;
+                    background-color: #f4f6f9;
+                    .item {
+                        .item__button {
+                            width: 100%;
+                            background-color: #ffffff;
+                            border-radius: 8px;
+                            padding: 16px 32px;
+                            font-size: 16px;
+                            // color: #0e0d35;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 4px;
+                        }
+                    }
                 }
                 &-3 {
-                    width: 150px;
-                    right: -150px;
+                    width: 100%;
+                    right: 0;
+                    top: 0 !important;
+                    // padding: 0;
+                    padding: 32px 12px;
+                    // position: static;
+                    z-index: 10;
+                    background-color: #f4f6f9;
+                    .item {
+                        .item__button {
+                            width: 100%;
+                            background-color: #ffffff;
+                            border-radius: 8px;
+                            padding: 16px 32px;
+                            font-size: 16px;
+                            // color: #0e0d35;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 4px;
+                        }
+                    }
                 }
+            }
+            .header__button {
+                display: block;
+            }
+            .menu-up {
+                display: none;
             }
         }
     }

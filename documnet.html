@@ -304,11 +304,70 @@
                         <h2 class="filter__title">Фильтр</h2>
                         <div class="filter__wrap">
                             <div class="filter__inputs">
-                                <input type="text" class="filter__input" placeholder="Поиск по названию" />
-                                <input type="number" class="filter__input" placeholder="Номер документа" />
-                                <input type="text" class="filter__input" placeholder="Принявший орган" id="autocompleteOrgan" autocomplete="off" />
-                                <input type="text" class="filter__input" placeholder="Тип документа" id="autocompleteTypeDoc" autocomplete="off" />
-                                <input type="text" class="filter__input" placeholder="Дата принятия" id="datepicker" autocomplete="off" />
+                                <div class="input-wrap">
+                                    <input type="text" class="filter__input" placeholder="Поиск по названию" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path
+                                            d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z"
+                                            stroke="#9F9EAE"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="input-wrap">
+                                    <span>№</span>
+                                    <input type="number" class="filter__input input-number" placeholder="Номер документа" />
+                                </div>
+                                <div class="input-wrap">
+                                    <input
+                                        type="text"
+                                        class="filter__input autocompleteOrgan"
+                                        placeholder="Принявший орган"
+                                        id="autocompleteOrgan"
+                                        autocomplete="off"
+                                    />
+                                    <svg class="svgOrgan" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                        <path
+                                            d="M5.66663 7.5L10.6666 12.5L15.6666 7.5"
+                                            stroke="#27264A"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="input-wrap">
+                                    <input
+                                        type="text"
+                                        class="filter__input autocompleteTypeDoc"
+                                        placeholder="Тип документа"
+                                        id="autocompleteTypeDoc"
+                                        autocomplete="off"
+                                    />
+                                    <svg class="svgTypeDoc" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                                        <path
+                                            d="M5.66663 7.5L10.6666 12.5L15.6666 7.5"
+                                            stroke="#27264A"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" class="filter__input" placeholder="Дата принятия" id="datepicker" autocomplete="off" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path
+                                            d="M17.4999 8.33366H2.49988M13.3332 1.66699V5.00033M6.66654 1.66699V5.00033M6.49988 18.3337H13.4999C14.9 18.3337 15.6001 18.3337 16.1349 18.0612C16.6053 17.8215 16.9877 17.439 17.2274 16.9686C17.4999 16.4339 17.4999 15.7338 17.4999 14.3337V7.33366C17.4999 5.93353 17.4999 5.23346 17.2274 4.69868C16.9877 4.22828 16.6053 3.84583 16.1349 3.60614C15.6001 3.33366 14.9 3.33366 13.4999 3.33366H6.49988C5.09975 3.33366 4.39968 3.33366 3.8649 3.60614C3.3945 3.84583 3.01205 4.22828 2.77236 4.69868C2.49988 5.23346 2.49988 5.93353 2.49988 7.33366V14.3337C2.49988 15.7338 2.49988 16.4339 2.77236 16.9686C3.01205 17.439 3.3945 17.8215 3.8649 18.0612C4.39968 18.3337 5.09975 18.3337 6.49988 18.3337Z"
+                                            stroke="#0E0D35"
+                                            stroke-width="1.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
                             </div>
                             <div class="filter__buttons">
                                 <button class="filter__button button-reset">Найти</button>
@@ -319,10 +378,10 @@
                     <div class="document__cards">
                         <div class="doceument__card card">
                             <div class="card__info">
-                                <a class="card__tag" href="">№1</a>
-                                <a class="card__tag" href="">12.04.2024</a>
-                                <a class="card__tag" href=""><span></span> Приказ председателя контрольно-счётной палаты города</a>
-                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
+                                <span class="card__tag" href="">№1</span>
+                                <span class="card__tag" href="">12.04.2024</span>
+                                <a class="card__tag card__tag--active" href=""><span></span> Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag card__tag--active" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
                             <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
@@ -395,10 +454,10 @@
                         </div>
                         <div class="doceument__card card">
                             <div class="card__info">
-                                <a class="card__tag" href="">№1</a>
-                                <a class="card__tag" href="">12.04.2024</a>
-                                <a class="card__tag" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
-                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
+                                <span class="card__tag" href="">№1</span>
+                                <span class="card__tag" href="">12.04.2024</span>
+                                <a class="card__tag card__tag--active" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag card__tag--active" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
                             <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
@@ -471,10 +530,10 @@
                         </div>
                         <div class="doceument__card card">
                             <div class="card__info">
-                                <a class="card__tag" href="">№1</a>
-                                <a class="card__tag" href="">12.04.2024</a>
-                                <a class="card__tag" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
-                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
+                                <span class="card__tag" href="">№1</span>
+                                <span class="card__tag" href="">12.04.2024</span>
+                                <a class="card__tag card__tag--active" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag card__tag--active" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
                             <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками

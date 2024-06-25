@@ -128,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ul.appendChild(li);
             }
             ul.classList.add('list', 'list-2');
-            // window.innerWidth === 680 ? headerMenu.append(ul) : item.append(ul);
-            if (window.innerWidth === 680) {
+            // window.innerWidth <= 960 ? headerMenu.append(ul) : item.append(ul);
+            if (window.innerWidth <= 960) {
                 menuUp.style.display = 'block';
                 ul.style.overflowX = 'scroll';
                 ul.style.height = `${document.querySelector('.list-1').offsetHeight + 33}px`;
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ul.appendChild(li);
                     }
                     ul.classList.add('list', 'list-3');
-                    if (window.innerWidth === 680) {
+                    if (window.innerWidth <= 960) {
                         menuUp.style.display = 'block';
                         ul.style.overflowX = 'scroll';
                         ul.style.height = `${document.querySelector('.list-2').offsetHeight}px`;
@@ -263,5 +263,39 @@ document.addEventListener('DOMContentLoaded', () => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+    });
+    // const newsSwiperSmall = new Swiper('.news__swiper-small', {
+    //     direction: 'horizontal',
+    //     slidesPerView: 3,
+    //     slidesPerGroup: 1,
+    //     spaceBetween: 16,
+    //     loop: true,
+    //     navigation: {
+    //         nextEl: '.swiper-button-next',
+    //         prevEl: '.swiper-button-prev',
+    //     },
+    //     breakpoints: {
+    //         800: {
+    //             slidesPerView: 3,
+    //         },
+    //         580: {
+    //             slidesPerView: 2,
+    //         },
+    //         300: {
+    //             slidesPerView: 1,
+    //         },
+    //     },
+    // });
+    document.querySelector('.header__buttons').addEventListener('wheel', function (event) {
+        if (event.deltaY !== 0) {
+            event.preventDefault();
+            this.scrollLeft += event.deltaY;
+        }
+    });
+    document.querySelector('.news__cards-small').addEventListener('wheel', function (event) {
+        if (event.deltaY !== 0) {
+            event.preventDefault();
+            this.scrollLeft += event.deltaY;
+        }
     });
 });

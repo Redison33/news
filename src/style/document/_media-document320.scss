@@ -86,76 +86,76 @@
                 }
             }
         }
-        .header__menu {
-            width: 100%;
-            padding: 32px 12px;
-            overflow: scroll;
-            .header__logo {
-                display: none;
-            }
-            .list {
-                width: 100%;
-                // &-1 {
-                //     position: relative;
-                // }
-                &-2 {
-                    width: 100%;
-                    right: 0px;
-                    // position: static;
-                    z-index: 1;
-                    top: 0 !important;
-                    padding: 0;
-                    padding: 32px 12px;
-                    background-color: #f4f6f9;
-                    .item {
-                        .item__button {
-                            width: 100%;
-                            background-color: #ffffff;
-                            border-radius: 8px;
-                            padding: 16px 32px;
-                            font-size: 16px;
-                            // color: #0e0d35;
-                            font-weight: 500;
-                            line-height: normal;
-                        }
-                        &:not(:last-child) {
-                            margin-bottom: 4px;
-                        }
-                    }
-                }
-                &-3 {
-                    width: 100%;
-                    right: 0;
-                    top: 0 !important;
-                    // padding: 0;
-                    padding: 32px 12px;
-                    // position: static;
-                    z-index: 10;
-                    background-color: #f4f6f9;
-                    .item {
-                        .item__button {
-                            width: 100%;
-                            background-color: #ffffff;
-                            border-radius: 8px;
-                            padding: 16px 32px;
-                            font-size: 16px;
-                            // color: #0e0d35;
-                            font-weight: 500;
-                            line-height: normal;
-                        }
-                        &:not(:last-child) {
-                            margin-bottom: 4px;
-                        }
-                    }
-                }
-            }
-            .header__button {
-                display: block;
-            }
-            .menu-up {
-                display: none;
-            }
-        }
+        // .header__menu {
+        //     width: 100%;
+        //     padding: 32px 12px;
+        //     overflow: scroll;
+        //     .header__logo {
+        //         display: none;
+        //     }
+        //     .list {
+        //         width: 100%;
+        //         // &-1 {
+        //         //     position: relative;
+        //         // }
+        //         &-2 {
+        //             width: 100%;
+        //             right: 0px;
+        //             // position: static;
+        //             z-index: 1;
+        //             top: 0 !important;
+        //             padding: 0;
+        //             padding: 32px 12px;
+        //             background-color: #f4f6f9;
+        //             .item {
+        //                 .item__button {
+        //                     width: 100%;
+        //                     background-color: #ffffff;
+        //                     border-radius: 8px;
+        //                     padding: 16px 32px;
+        //                     font-size: 16px;
+        //                     // color: #0e0d35;
+        //                     font-weight: 500;
+        //                     line-height: normal;
+        //                 }
+        //                 &:not(:last-child) {
+        //                     margin-bottom: 4px;
+        //                 }
+        //             }
+        //         }
+        //         &-3 {
+        //             width: 100%;
+        //             right: 0;
+        //             top: 0 !important;
+        //             // padding: 0;
+        //             padding: 32px 12px;
+        //             // position: static;
+        //             z-index: 10;
+        //             background-color: #f4f6f9;
+        //             .item {
+        //                 .item__button {
+        //                     width: 100%;
+        //                     background-color: #ffffff;
+        //                     border-radius: 8px;
+        //                     padding: 16px 32px;
+        //                     font-size: 16px;
+        //                     // color: #0e0d35;
+        //                     font-weight: 500;
+        //                     line-height: normal;
+        //                 }
+        //                 &:not(:last-child) {
+        //                     margin-bottom: 4px;
+        //                 }
+        //             }
+        //         }
+        //     }
+        //     .header__button {
+        //         display: block;
+        //     }
+        //     .menu-up {
+        //         display: none;
+        //     }
+        // }
     }
     .breadcrumb {
         padding: 0 12px;
@@ -178,7 +178,11 @@
                 margin-bottom: 24px;
             }
             .filter {
-                display: none;
+                border-radius: 24px 24px 0 0;
+                visibility: hidden;
+                transform: translateX(-320px);
+                transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+                display: block;
                 z-index: 1001;
                 position: fixed;
                 bottom: 0;
@@ -207,13 +211,16 @@
                     }
                 }
                 &--active {
-                    display: block;
+                    visibility: visible;
+                    transform: none;
                 }
             }
             .document__cards {
                 .card {
                     padding: 12px;
-
+                    &:last-child {
+                        margin-bottom: 24px;
+                    }
                     &__info {
                         overflow-x: visible;
                         flex-wrap: wrap;

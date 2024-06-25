@@ -44,7 +44,7 @@ body {
 .header {
     top: 0;
     z-index: 100;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     &__wrap {
         position: relative;
         &-top {
@@ -56,6 +56,9 @@ body {
                 padding: 20px 0;
                 .header__logo {
                     display: none;
+                    img {
+                        height: 100%;
+                    }
                 }
                 .nav {
                     color: $primary-light;
@@ -116,6 +119,7 @@ body {
                         display: flex;
                         align-items: center;
                         gap: 10px;
+                        padding: 17px 24px;
                         &:hover {
                             background-color: $hover-button;
                         }
@@ -141,8 +145,10 @@ body {
                 }
                 .header__logo {
                     margin-right: 30px;
+                    display: flex;
+                    align-items: center;
                     img {
-                        min-width: 165px;
+                        height: 100%;
                     }
                 }
                 .input__wrap {
@@ -154,14 +160,13 @@ body {
                         border-radius: 4px;
                         padding: 14px;
                         font-size: 16px;
-                        color: $grey;
+                        color: $secondary-dark;
                         line-height: normal;
                         &:focus {
                             outline: 2px solid $green;
                         }
                     }
                     .input__button {
-                        cursor: pointer;
                         position: absolute;
                         display: flex;
                         align-items: center;
@@ -169,18 +174,6 @@ body {
                         top: 50%;
                         line-height: normal;
                         transform: translateY(-50%);
-                        svg {
-                            path {
-                                transition: stroke 0.3s ease-in-out;
-                            }
-                        }
-                        &:hover {
-                            svg {
-                                path {
-                                    stroke: $red;
-                                }
-                            }
-                        }
                     }
                 }
                 .button-input {
@@ -291,7 +284,10 @@ body {
         }
     }
     .header__menu {
-        display: none;
+        transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateX(-608px);
+        // display: none;
+        visibility: hidden;
         position: fixed;
         top: 0;
         left: 0;
@@ -350,6 +346,7 @@ body {
                     margin-bottom: 4px;
                 }
             }
+
             &-2 {
                 // display: none;
                 border-radius: 8px;
@@ -358,7 +355,7 @@ body {
                 position: absolute;
                 background-color: $primary-light;
                 border-radius: 8px;
-                right: -545px;
+                right: -590px;
                 top: 0;
                 z-index: 1000;
                 .list__item {
@@ -391,7 +388,7 @@ body {
                 position: absolute;
                 background-color: $primary-light;
                 border-radius: 8px;
-                right: -305px;
+                right: -353px;
                 top: -24px;
                 .list__item {
                     padding: 0;
@@ -432,7 +429,8 @@ body {
             margin-bottom: 8px;
         }
         &--active {
-            display: block;
+            visibility: visible;
+            transform: none;
         }
     }
 }
