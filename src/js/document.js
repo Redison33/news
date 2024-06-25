@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBack = document.querySelector('.menu-back');
     const menuUp = document.querySelector('.menu-up');
     const buttonInputVisible = document.querySelector('.button-input');
+    const filterButton = document.querySelector('.document__button');
     const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <path
                                     d="M8.25 16.5L13.75 11L8.25 5.5"
@@ -19,6 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             </svg>`;
     let tempMenu1;
     let tempMenu2;
+    filterButton.addEventListener('click', () => {
+        document.querySelector('.filter').classList.add('filter--active');
+        document.querySelector('.filter__overlay').style.display = 'block';
+        document.querySelector('body').style.overflow = 'hidden';
+    });
+    document.querySelector('.filter__overlay').addEventListener('click', () => {
+        document.querySelector('.filter').classList.remove('filter--active');
+        document.querySelector('.filter__overlay').removeAttribute('style');
+        document.querySelector('body').removeAttribute('style');
+    });
     const autocompleteOrgan = new autoComplete({
         selector: '#autocompleteOrgan',
         data: {
