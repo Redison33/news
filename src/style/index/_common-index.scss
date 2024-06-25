@@ -160,6 +160,9 @@ body {
                         font-size: 16px;
                         color: $grey;
                         line-height: normal;
+                        &:focus {
+                            outline: 2px solid $green;
+                        }
                     }
                     .input__button {
                         cursor: pointer;
@@ -183,6 +186,10 @@ body {
                             }
                         }
                     }
+                }
+                .button-input {
+                    display: none;
+                    align-items: center;
                 }
             }
             &-visible {
@@ -421,6 +428,12 @@ body {
             color: #9f9eae;
             font-weight: 500;
             line-height: 20px;
+        }
+        .menu-up {
+            display: none;
+            background-color: $red;
+            color: $primary-light;
+            margin-bottom: 8px;
         }
         &--active {
             display: block;

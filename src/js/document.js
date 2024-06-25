@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerMenu = document.querySelector('.header__menu');
     const menuOverlay = document.querySelector('.menu__overlay');
     const menuBack = document.querySelector('.menu-back');
-    const filterButton = document.querySelector('.document__button');
-    // const inputDate = document.getElementById('datepicker');
+    const menuUp = document.querySelector('.menu-up');
+    const buttonInputVisible = document.querySelector('.button-input');
     const svg = ` <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                                 <path
                                     d="M8.25 16.5L13.75 11L8.25 5.5"
@@ -113,6 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('body').style.overflow = 'hidden';
         menuOverlay.style.display = 'block';
     });
+    buttonInputVisible.addEventListener('click', () => {
+        document.querySelector('.input__wrap').style.display = 'block';
+    });
+    document.querySelector('main').addEventListener('click', () => {
+        document.querySelector('.input__wrap').removeAttribute('style');
+    });
     menuOverlay.addEventListener('click', () => {
         headerMenu.classList.remove('header__menu--active');
         document.querySelector('body').style.overflow = 'visible';
@@ -139,6 +145,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('body').style.overflow = 'visible';
         menuOverlay.style.display = 'none';
         if (document.querySelector('.list-2')) document.querySelector('.list-2').remove();
+        if (document.querySelector('.list-3')) document.querySelector('.list-3').remove();
+        tempMenu1 = 0;
+        tempMenu2 = 0;
+        if (headerMenu.querySelector('.list-1')) {
+            for (const item of headerMenu.querySelector('.list-1').querySelectorAll('.item')) {
+                item.querySelector('.item__button').removeAttribute('style');
+                item.querySelector('.item__button').classList.remove('item__button--active');
+            }
+        }
+        if (headerMenu.querySelector('.list-2')) {
+            for (const item of headerMenu.querySelector('.list-2').querySelectorAll('.item')) {
+                item.querySelector('.item__button').removeAttribute('style');
+                item.querySelector('.item__button').classList.remove('item__button--active');
+            }
+        }
+    });
+    menuUp.addEventListener('click', () => {
+        if (document.querySelector('.list-2') && !document.querySelector('.list-3')) {
+            document.querySelector('.list-2').remove();
+            menuUp.removeAttribute('style');
+        }
         if (document.querySelector('.list-3')) document.querySelector('.list-3').remove();
         tempMenu1 = 0;
         tempMenu2 = 0;
@@ -182,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let i = 0; i < 14; i++) {
                 let li = document.createElement('li');
                 let button = document.createElement('button');
-                button.textContent = 'Кнопка';
+                button.textContent = 'Кнопка 2';
                 button.insertAdjacentHTML('beforeend', svg);
                 button.classList.add('button-reset', 'item__button', 'item__button-2');
                 li.classList.add('list__item', 'item');
@@ -190,7 +217,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 ul.appendChild(li);
             }
             ul.classList.add('list', 'list-2');
-            item.append(ul);
+            // window.innerWidth === 680 ? headerMenu.append(ul) : item.append(ul);
+            if (window.innerWidth === 680) {
+                menuUp.style.display = 'block';
+                ul.style.overflowX = 'scroll';
+                ul.style.height = `${document.querySelector('.list-1').offsetHeight + 33}px`;
+                console.log(document.querySelector('.list-1').offsetHeight);
+                headerMenu.append(ul);
+            } else {
+                item.append(ul);
+            }
+            // item.append(ul);
             if (rect.bottom + ul.offsetHeight > windowHeight + 100) {
                 topPosition = ul.offsetHeight - rect.top;
                 // topPosition = rect.top - ul.offsetHeight;
@@ -229,15 +266,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     for (let i = 0; i < 3; i++) {
                         let li = document.createElement('li');
                         let button = document.createElement('button');
-                        button.textContent = 'Кнопка';
+                        button.textContent = 'Кнопка 3';
                         button.insertAdjacentHTML('beforeend', svg);
                         button.classList.add('button-reset', 'item__button', 'item__button-3');
-                        li.classList.add('list__item');
+                        li.classList.add('list__item', 'item');
                         li.append(button);
                         ul.appendChild(li);
                     }
                     ul.classList.add('list', 'list-3');
-                    item.append(ul);
+                    if (window.innerWidth === 680) {
+                        menuUp.style.display = 'block';
+                        ul.style.overflowX = 'scroll';
+                        ul.style.height = `${document.querySelector('.list-2').offsetHeight}px`;
+                        headerMenu.append(ul);
+                    } else {
+                        item.append(ul);
+                    }
                     if (rect.bottom + ul.offsetHeight > windowHeight + 60) {
                         topPosition = windowHeight - rect.top - ul.offsetHeight + 10;
                         ul.style.top = `${topPosition}px`;
@@ -247,16 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     window.addEventListener('scroll', handleScroll);
-    filterButton.addEventListener('click', () => {
-        document.querySelector('.filter').classList.add('filter--active');
-        document.querySelector('.filter__overlay').style.display = 'block';
-        document.querySelector('body').style.overflow = 'hidden';
-    });
-    document.querySelector('.filter__overlay').addEventListener('click', () => {
-        document.querySelector('.filter').classList.remove('filter--active');
-        document.querySelector('.filter__overlay').style.display = 'none';
-        document.querySelector('body').style.overflow = 'visible';
-    });
+
     function handleScroll() {
         const scrollTop = document.documentElement.scrollTop;
 

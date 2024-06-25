@@ -181,6 +181,9 @@ body {
   color: #7e7e7e;
   line-height: normal;
 }
+.header__wrap-middle .header__container .input__wrap .header__input:focus {
+  outline: 2px solid #049300;
+}
 .header__wrap-middle .header__container .input__wrap .input__button {
   cursor: pointer;
   position: absolute;
@@ -196,6 +199,10 @@ body {
 }
 .header__wrap-middle .header__container .input__wrap .input__button:hover svg path {
   stroke: #d6383c;
+}
+.header__wrap-middle .header__container .button-input {
+  display: none;
+  align-items: center;
 }
 .header__wrap-middle-visible {
   position: fixed;
@@ -419,6 +426,12 @@ body {
   font-weight: 500;
   line-height: 20px;
 }
+.header .header__menu .menu-up {
+  display: none;
+  background-color: #d6383c;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
 .header .header__menu--active {
   display: block;
 }
@@ -491,6 +504,7 @@ body {
   border-radius: 12px;
   background-color: #ffffff;
   padding: 42px;
+  margin-bottom: 32px;
 }
 .documentInfo__container .card .info {
   display: grid;
@@ -622,7 +636,8 @@ body {
   line-height: normal;
   margin-bottom: 8px;
 }
-.documentInfo__container .card .loading__wrap label {
+.documentInfo__container .card .loading__wrap .loading__file {
+  text-decoration: none;
   display: flex;
   width: 100%;
   background-color: #ffffff;
@@ -637,13 +652,13 @@ body {
   line-height: normal;
   transition: color 0.3s ease-in-out;
 }
-.documentInfo__container .card .loading__wrap label svg path {
+.documentInfo__container .card .loading__wrap .loading__file svg path {
   transition: stroke 0.3s ease-in-out;
 }
-.documentInfo__container .card .loading__wrap label:hover {
+.documentInfo__container .card .loading__wrap .loading__file:hover {
   color: #049300;
 }
-.documentInfo__container .card .loading__wrap label:hover svg path {
+.documentInfo__container .card .loading__wrap .loading__file:hover svg path {
   stroke: #049300;
 }
 .documentInfo__container .card .loading__wrap .loading__input {
@@ -655,6 +670,26 @@ body {
   color: #9f9eae;
   font-weight: 400;
   line-height: normal;
+}
+.documentInfo__container .documentInfo__button {
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  background-color: #d6383c;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 14px 50px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  transition: background-color 0.3s ease-in-out;
+}
+.documentInfo__container .documentInfo__button:hover {
+  background-color: #f9454a;
+}
+.documentInfo__container .documentInfo__button:active {
+  background-color: #4b0002;
 }
 
 .footer {
@@ -815,27 +850,6 @@ body {
   .header .header__menu .list-3 {
     width: 250px;
     right: -245px;
-  }
-  .main {
-    margin-bottom: 80px;
-  }
-  .main .news__container .news__swiper .swiper-button-prev {
-    left: 37.7%;
-  }
-  .main .news__container .news__swiper .swiper-button-next {
-    right: 37.7%;
-  }
-  .main .news__container .news__wrap .asideInsideNews {
-    min-width: 290px;
-  }
-  .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-prev {
-    left: 33.7%;
-  }
-  .main .news__container .news__wrap .news__basic .news__swiper-inside .swiper-button-next {
-    right: 33.7%;
-  }
-  .main .asideNews {
-    display: none;
   }
   .footer__container .footer__top {
     margin-bottom: 44px;
@@ -1077,6 +1091,7 @@ body {
   }
   .header__wrap-middle .header__container {
     padding: 12px 16px;
+    justify-content: start;
   }
   .header__wrap-middle .header__container .header__button-menu {
     background-color: transparent;
@@ -1092,7 +1107,21 @@ body {
     display: none;
   }
   .header__wrap-middle .header__container .input__wrap {
+    position: absolute;
     display: none;
+    left: 16px;
+    right: 16px;
+    bottom: 12px;
+    top: 12px;
+    width: unset;
+  }
+  .header__wrap-middle .header__container .input__wrap .header__input {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .header__wrap-middle .header__container .button-input {
+    display: flex;
+    margin-left: auto;
   }
   .header__wrap-middle .header__container .header__button-enter {
     padding: 4px 16px;
@@ -1118,6 +1147,7 @@ body {
   .header .header__menu {
     width: 100%;
     padding: 32px 12px;
+    overflow: scroll;
   }
   .header .header__menu .header__logo {
     display: none;
@@ -1126,17 +1156,51 @@ body {
     width: 100%;
   }
   .header .header__menu .list-2 {
-    display: none;
     width: 100%;
     right: 0px;
+    z-index: 1;
+    top: 0 !important;
+    padding: 0;
+    padding: 32px 12px;
+    background-color: #f4f6f9;
+  }
+  .header .header__menu .list-2 .item .item__button {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .header .header__menu .list-2 .item:not(:last-child) {
+    margin-bottom: 4px;
   }
   .header .header__menu .list-3 {
-    display: none;
     width: 100%;
     right: 0;
+    top: 0 !important;
+    padding: 32px 12px;
+    z-index: 10;
+    background-color: #f4f6f9;
+  }
+  .header .header__menu .list-3 .item .item__button {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .header .header__menu .list-3 .item:not(:last-child) {
+    margin-bottom: 4px;
   }
   .header .header__menu .header__button {
     display: block;
+  }
+  .header .header__menu .menu-up {
+    display: none;
   }
   .breadcrumb {
     padding: 0 12px;

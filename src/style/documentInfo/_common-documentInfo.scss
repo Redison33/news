@@ -156,6 +156,9 @@ body {
                         font-size: 16px;
                         color: $grey;
                         line-height: normal;
+                        &:focus {
+                            outline: 2px solid $green;
+                        }
                     }
                     .input__button {
                         cursor: pointer;
@@ -179,6 +182,10 @@ body {
                             }
                         }
                     }
+                }
+                .button-input {
+                    display: none;
+                    align-items: center;
                 }
             }
             &-visible {
@@ -418,6 +425,12 @@ body {
             font-weight: 500;
             line-height: 20px;
         }
+        .menu-up {
+            display: none;
+            background-color: $red;
+            color: $primary-light;
+            margin-bottom: 8px;
+        }
         &--active {
             display: block;
         }
@@ -493,6 +506,7 @@ body {
             border-radius: 12px;
             background-color: $primary-light;
             padding: 42px;
+            margin-bottom: 32px;
             .info {
                 // max-width: 798px;
                 display: grid;
@@ -624,7 +638,8 @@ body {
                         line-height: normal;
                         margin-bottom: 8px;
                     }
-                    label {
+                    .loading__file {
+                        text-decoration: none;
                         display: flex;
                         width: 100%;
                         background-color: $primary-light;
@@ -663,6 +678,26 @@ body {
                 color: #9f9eae;
                 font-weight: 400;
                 line-height: normal;
+            }
+        }
+        .documentInfo__button {
+            text-decoration: none;
+            display: block;
+            width: 150px;
+            background-color: #d6383c;
+            color: #ffffff;
+            margin: 0 auto;
+            padding: 14px 50px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $hover-button;
+            }
+            &:active {
+                background-color: $active-button;
             }
         }
     }

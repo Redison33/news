@@ -284,6 +284,9 @@ body {
                         font-size: 16px;
                         color: $grey;
                         line-height: normal;
+                        &:focus {
+                            outline: 2px solid $green;
+                        }
                     }
                     .input__button {
                         cursor: pointer;
@@ -307,6 +310,10 @@ body {
                             }
                         }
                     }
+                }
+                .button-input {
+                    display: none;
+                    align-items: center;
                 }
             }
             &-visible {
@@ -546,6 +553,12 @@ body {
             font-weight: 500;
             line-height: 20px;
         }
+        .menu-up {
+            display: none;
+            background-color: $red;
+            color: $primary-light;
+            margin-bottom: 8px;
+        }
         &--active {
             display: block;
         }
@@ -783,6 +796,7 @@ body {
                     gap: 4px;
                     width: 100%;
                     .card__tag {
+                        text-decoration: none;
                         display: flex;
                         align-items: center;
                         gap: 8px;
@@ -794,6 +808,10 @@ body {
                         font-weight: 400;
                         line-height: normal;
                         white-space: nowrap;
+                        transition: color 0.3s ease-in-out;
+                        &:hover {
+                            color: $red;
+                        }
                         span {
                             display: inline-block;
                             width: 8px;
@@ -804,6 +822,7 @@ body {
                     }
                 }
                 &__title {
+                    text-decoration: none;
                     margin: 0;
                     color: $primary-dark;
                     font-size: 16px;
@@ -811,6 +830,9 @@ body {
                     line-height: normal;
                     // margin-top: auto;
                     transition: color 0.3s ease-in-out;
+                    &:hover {
+                        color: $red;
+                    }
                 }
                 &__files {
                     margin-top: auto;
@@ -818,6 +840,7 @@ body {
                     gap: 8px;
                     width: 100%;
                     .card__file {
+                        text-decoration: none;
                         display: flex;
                         white-space: nowrap;
                         align-items: center;
@@ -829,6 +852,20 @@ body {
                         font-weight: 500;
                         line-height: normal;
                         color: #868599;
+                        transition: color 0.3s ease-in-out;
+                        svg {
+                            path {
+                                transition: stroke 0.3s ease-in-out;
+                            }
+                        }
+                        &:hover {
+                            color: $red;
+                            svg {
+                                path {
+                                    stroke: $red;
+                                }
+                            }
+                        }
                     }
                 }
                 &__date {
@@ -838,11 +875,6 @@ body {
                     font-weight: 400;
                     line-height: normal;
                 }
-                &:hover {
-                    .card__title {
-                        color: $red;
-                    }
-                }
             }
         }
         .pagination {
@@ -850,6 +882,7 @@ body {
             align-items: center;
             justify-content: center;
             gap: 12px;
+            margin-bottom: 32px;
             &__button {
                 background-color: $red;
                 width: 52px;
@@ -885,6 +918,26 @@ body {
                         border-color: $red;
                     }
                 }
+            }
+        }
+        .document__button-back {
+            text-decoration: none;
+            display: block;
+            width: 150px;
+            background-color: #d6383c;
+            color: #ffffff;
+            margin: 0 auto;
+            padding: 14px 50px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: normal;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $hover-button;
+            }
+            &:active {
+                background-color: $active-button;
             }
         }
     }

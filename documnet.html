@@ -61,6 +61,17 @@
                             </svg>
                         </button>
                     </div>
+                    <button class="button-input button-reset">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M17.5 17.5L14.5834 14.5833M16.6667 9.58333C16.6667 13.4954 13.4954 16.6667 9.58333 16.6667C5.67132 16.6667 2.5 13.4954 2.5 9.58333C2.5 5.67132 5.67132 2.5 9.58333 2.5C13.4954 2.5 16.6667 5.67132 16.6667 9.58333Z"
+                                stroke="#9F9EAE"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
                     <button class="header__button header__button-enter button-reset">Войти</button>
                 </div>
             </div>
@@ -259,7 +270,8 @@
                         </button>
                     </li>
                 </ul>
-                <button class="header__button button-reset menu-back">Назад</button>
+                <button class="header__button button-reset menu-up">Назад</button>
+                <button class="header__button button-reset menu-back">На главную</button>
             </div>
         </header>
         <main>
@@ -305,20 +317,20 @@
                         </div>
                     </div>
                     <div class="document__cards">
-                        <a href="documentInfo.html" class="doceument__card card">
+                        <div class="doceument__card card">
                             <div class="card__info">
-                                <span class="card__tag">№1</span>
-                                <span class="card__tag">12.04.2024</span>
-                                <span class="card__tag"><span></span> Приказ председателя контрольно-счётной палаты города</span>
-                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                                <a class="card__tag" href="">№1</a>
+                                <a class="card__tag" href="">12.04.2024</a>
+                                <a class="card__tag" href=""><span></span> Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
-                            <h3 class="card__title">
+                            <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
                                 с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
                                 Центральной северной части микрорайона Коммунар в г. Владимире
-                            </h3>
+                            </a>
                             <div class="card__files">
-                                <div class="card__file">
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -329,8 +341,8 @@
                                         />
                                     </svg>
                                     Отсканированная копия оригинала
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -341,8 +353,8 @@
                                         />
                                     </svg>
                                     Текст документа
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -353,8 +365,8 @@
                                         />
                                     </svg>
                                     Приложение №1
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -365,8 +377,8 @@
                                         />
                                     </svg>
                                     Приложение №2
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -377,24 +389,24 @@
                                         />
                                     </svg>
                                     Приложение №3
-                                </div>
+                                </a>
                             </div>
                             <span class="card__date">Опубликовано: 19.03.2024</span>
-                        </a>
-                        <a href="documentInfo.html" class="doceument__card card">
+                        </div>
+                        <div class="doceument__card card">
                             <div class="card__info">
-                                <span class="card__tag">№1</span>
-                                <span class="card__tag">12.04.2024</span>
-                                <span class="card__tag"><span></span>Приказ председателя контрольно-счётной палаты города</span>
-                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                                <a class="card__tag" href="">№1</a>
+                                <a class="card__tag" href="">12.04.2024</a>
+                                <a class="card__tag" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
-                            <h3 class="card__title">
+                            <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
                                 с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
                                 Центральной северной части микрорайона Коммунар в г. Владимире
-                            </h3>
+                            </a>
                             <div class="card__files">
-                                <div class="card__file">
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -405,8 +417,8 @@
                                         />
                                     </svg>
                                     Отсканированная копия оригинала
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -417,8 +429,8 @@
                                         />
                                     </svg>
                                     Текст документа
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -429,8 +441,8 @@
                                         />
                                     </svg>
                                     Приложение №1
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -441,8 +453,8 @@
                                         />
                                     </svg>
                                     Приложение №2
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -453,24 +465,24 @@
                                         />
                                     </svg>
                                     Приложение №3
-                                </div>
+                                </a>
                             </div>
                             <span class="card__date">Опубликовано: 19.03.2024</span>
-                        </a>
-                        <a href="documentInfo.html" class="doceument__card card">
+                        </div>
+                        <div class="doceument__card card">
                             <div class="card__info">
-                                <span class="card__tag">№1</span>
-                                <span class="card__tag">12.04.2024</span>
-                                <span class="card__tag"><span></span>Приказ председателя контрольно-счётной палаты города</span>
-                                <span class="card__tag"><span></span>Структурные подразделения администрации г. Владимира</span>
+                                <a class="card__tag" href="">№1</a>
+                                <a class="card__tag" href="">12.04.2024</a>
+                                <a class="card__tag" href=""><span></span>Приказ председателя контрольно-счётной палаты города</a>
+                                <a class="card__tag" href=""><span></span>Структурные подразделения администрации г. Владимира</a>
                             </div>
-                            <h3 class="card__title">
+                            <a href="documentInfo.html" class="card__title">
                                 О подготовке проекта межевания территории, ограниченной ул. Центральной, проектируемым бульваром, земельными участками
                                 с кадастровыми номерами 33:05:170101:2270, 33:05:170101:507, внутриквартальным проездом от ул. Песочной до ул.
                                 Центральной северной части микрорайона Коммунар в г. Владимире
-                            </h3>
+                            </a>
                             <div class="card__files">
-                                <div class="card__file">
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -481,8 +493,8 @@
                                         />
                                     </svg>
                                     Отсканированная копия оригинала
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -493,8 +505,8 @@
                                         />
                                     </svg>
                                     Текст документа
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -505,8 +517,8 @@
                                         />
                                     </svg>
                                     Приложение №1
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -517,8 +529,8 @@
                                         />
                                     </svg>
                                     Приложение №2
-                                </div>
-                                <div class="card__file">
+                                </a>
+                                <a class="card__file" href="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                         <path
                                             d="M15.75 15.75H2.25M13.5 8.25L9 12.75M9 12.75L4.5 8.25M9 12.75V2.25"
@@ -529,10 +541,10 @@
                                         />
                                     </svg>
                                     Приложение №3
-                                </div>
+                                </a>
                             </div>
                             <span class="card__date">Опубликовано: 19.03.2024</span>
-                        </a>
+                        </div>
                     </div>
                     <div class="document__pagination pagination">
                         <button class="pagination__button pagination__button-prev button-reset">
@@ -565,6 +577,7 @@
                             </svg>
                         </button>
                     </div>
+                    <a href="index.html" class="document__button-back button-reset">Назад</a>
                 </div>
             </section>
         </main>
