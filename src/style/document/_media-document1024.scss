@@ -101,9 +101,25 @@
                 .card {
                     &__info {
                         overflow-x: scroll;
+                        .card__tag {
+                            &:hover .tooltip {
+                                display: none;
+                            }
+                            .tooltip {
+                                display: none;
+                            }
+                        }
                     }
                     &__files {
                         overflow-x: scroll;
+                        .card__file {
+                            &:hover .tooltip {
+                                display: none;
+                            }
+                            .tooltip {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }

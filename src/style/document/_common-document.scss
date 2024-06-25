@@ -837,6 +837,7 @@ body {
                     gap: 4px;
                     width: 100%;
                     .card__tag {
+                        position: relative;
                         text-decoration: none;
                         display: flex;
                         align-items: center;
@@ -850,6 +851,9 @@ body {
                         line-height: normal;
                         white-space: nowrap;
                         transition: color 0.3s ease-in-out;
+                        &:hover .tooltip {
+                            display: block;
+                        }
                         &--active {
                             &:hover {
                                 color: $red;
@@ -862,6 +866,37 @@ body {
                             height: 8px;
                             border-radius: 8px;
                             background-color: #8078ab;
+                        }
+                        .tooltip {
+                            width: unset;
+                            height: unset;
+                            border-radius: unset;
+                            background-color: unset;
+                            display: none;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: -55px;
+                            padding: 12px 16px;
+                            font-size: 14px;
+                            color: $secondary-dark;
+                            font-weight: 600;
+                            line-height: normal;
+                            background-color: $primary-light;
+                            border-radius: 8px;
+                            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 13px;
+                                height: 7px;
+                                bottom: -8px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                border-left: 9px solid transparent;
+                                border-right: 9px solid transparent;
+                                border-top: 8px solid $primary-light;
+                            }
                         }
                     }
                     &::-webkit-scrollbar {
@@ -887,6 +922,7 @@ body {
                     gap: 8px;
                     width: 100%;
                     .card__file {
+                        position: relative;
                         text-decoration: none;
                         display: flex;
                         white-space: nowrap;
@@ -900,6 +936,49 @@ body {
                         line-height: normal;
                         color: #868599;
                         transition: color 0.3s ease-in-out;
+                        .tooltip {
+                            // display: block;
+                            z-index: 1;
+                            width: unset;
+                            height: unset;
+                            border-radius: unset;
+                            background-color: unset;
+                            display: none;
+                            gap: 4px;
+                            flex-direction: column;
+                            align-items: center;
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: -80px;
+                            padding: 12px 16px;
+                            font-size: 14px;
+                            color: $secondary-dark;
+                            font-weight: 600;
+                            line-height: normal;
+                            background-color: $primary-light;
+                            border-radius: 8px;
+                            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+                            span {
+                                font-weight: 500;
+                                color: #9f9eae;
+                                &:last-child {
+                                    font-size: 12px;
+                                }
+                            }
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                width: 13px;
+                                height: 7px;
+                                bottom: -8px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                border-left: 9px solid transparent;
+                                border-right: 9px solid transparent;
+                                border-top: 8px solid $primary-light;
+                            }
+                        }
                         svg {
                             path {
                                 transition: stroke 0.3s ease-in-out;
@@ -912,6 +991,9 @@ body {
                                     stroke: $red;
                                 }
                             }
+                        }
+                        &:hover .tooltip {
+                            display: flex;
                         }
                     }
                     &::-webkit-scrollbar {

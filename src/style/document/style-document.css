@@ -822,6 +822,7 @@ body {
   width: 100%;
 }
 .document__container .document__cards .card__info .card__tag {
+  position: relative;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -836,6 +837,9 @@ body {
   white-space: nowrap;
   transition: color 0.3s ease-in-out;
 }
+.document__container .document__cards .card__info .card__tag:hover .tooltip {
+  display: block;
+}
 .document__container .document__cards .card__info .card__tag--active:hover {
   color: #d6383c;
   outline: 1px solid #d6383c;
@@ -846,6 +850,37 @@ body {
   height: 8px;
   border-radius: 8px;
   background-color: #8078ab;
+}
+.document__container .document__cards .card__info .card__tag .tooltip {
+  width: unset;
+  height: unset;
+  border-radius: unset;
+  background-color: unset;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -55px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #0e0d35;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.document__container .document__cards .card__info .card__tag .tooltip:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 7px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 8px solid #ffffff;
 }
 .document__container .document__cards .card__info::-webkit-scrollbar {
   display: none;
@@ -869,6 +904,7 @@ body {
   width: 100%;
 }
 .document__container .document__cards .card__files .card__file {
+  position: relative;
   text-decoration: none;
   display: flex;
   white-space: nowrap;
@@ -883,6 +919,48 @@ body {
   color: #868599;
   transition: color 0.3s ease-in-out;
 }
+.document__container .document__cards .card__files .card__file .tooltip {
+  z-index: 1;
+  width: unset;
+  height: unset;
+  border-radius: unset;
+  background-color: unset;
+  display: none;
+  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -80px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #0e0d35;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.document__container .document__cards .card__files .card__file .tooltip span {
+  font-weight: 500;
+  color: #9f9eae;
+}
+.document__container .document__cards .card__files .card__file .tooltip span:last-child {
+  font-size: 12px;
+}
+.document__container .document__cards .card__files .card__file .tooltip:after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 7px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 8px solid #ffffff;
+}
 .document__container .document__cards .card__files .card__file svg path {
   transition: stroke 0.3s ease-in-out;
 }
@@ -891,6 +969,9 @@ body {
 }
 .document__container .document__cards .card__files .card__file:hover svg path {
   stroke: #d6383c;
+}
+.document__container .document__cards .card__files .card__file:hover .tooltip {
+  display: flex;
 }
 .document__container .document__cards .card__files::-webkit-scrollbar {
   display: none;
@@ -1235,8 +1316,20 @@ body {
   .document__container .document__cards .card__info {
     overflow-x: scroll;
   }
+  .document__container .document__cards .card__info .card__tag:hover .tooltip {
+    display: none;
+  }
+  .document__container .document__cards .card__info .card__tag .tooltip {
+    display: none;
+  }
   .document__container .document__cards .card__files {
     overflow-x: scroll;
+  }
+  .document__container .document__cards .card__files .card__file:hover .tooltip {
+    display: none;
+  }
+  .document__container .document__cards .card__files .card__file .tooltip {
+    display: none;
   }
   .footer {
     padding: 42px 0;

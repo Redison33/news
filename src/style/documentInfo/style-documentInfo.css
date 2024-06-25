@@ -658,10 +658,10 @@ body {
   transition: stroke 0.3s ease-in-out;
 }
 .documentInfo__container .card .loading__wrap .loading__file:hover {
-  color: #049300;
+  color: #d6383c;
 }
 .documentInfo__container .card .loading__wrap .loading__file:hover svg path {
-  stroke: #049300;
+  stroke: #d6383c;
 }
 .documentInfo__container .card .loading__wrap .loading__input {
   display: none;
